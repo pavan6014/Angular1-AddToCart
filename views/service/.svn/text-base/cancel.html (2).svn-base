@@ -1,0 +1,59 @@
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="headline"><h2>Submit Cancel</h2></div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-3">
+            <div service-navigation></div>
+            <div trouble-navigation></div>
+        </div>
+        <div class="col-sm-9">
+            <div class="row">
+                <div class="col-sm-12">
+                    <userinformation></userinformation>
+                    <div servicetype></div>
+                    <div modeminformation></div>
+
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title"><i class="fa"></i> Transaction History</h3>
+                        </div>
+
+                        <div class="panel-body">
+
+                            <table class="table table-striped invoice-table">
+                                <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>Transaction ID</th>
+                                    <th>Transaction Type</th>
+                                    <th>Transaction Date</th>
+                                    <th>Status</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr ng-repeat="transaction in account.CustomerTransHistory">
+                                    <td><input type="radio" name="optradio"><label class="custom-label"></label></td>
+                                    <td><a href="#">{{transaction.transactionID}}</a></td>
+                                    <td>{{transaction.transactionType}}</td>
+                                    <td>{{transaction.transactionDate}}</td>
+                                    <td>{{transaction.status}}</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <section class="col-md-12 margin-left-15">
+                        <button class="btn-u btn-u-default" ng-click="cancelPopup();">Cancel</button>
+                    </section>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    </div>

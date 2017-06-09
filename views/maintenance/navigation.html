@@ -1,0 +1,11 @@
+<div>
+    <uib-accordion close-others="true" class="navigationAcc">
+        <uib-accordion-group heading="Maintenance" class="" is-open="true">
+            <ul class="collapse in list-group sidebar-nav-v1" aria-expanded="true">
+                <li ng-class="{active: itemActive=='maintenance/profile'}"><a href="maintenance/profile" ng-click="changeItemActive('maintenance/profile')">Profile<i class="glyphicon glyphicon-chevron-right"></i></a></li>
+                <li ng-class="{active: itemActive=='maintenance/planAndAddOns'}"><a href="maintenance/planAndAddOns" ng-click="changeItemActive('maintenance/planAndAddOns')">Plan and Add-ons<i class="glyphicon glyphicon-chevron-right"></i></a></li>
+                <!--<li ng-class="{active: itemActive=='maintenance/customerWizard'}"><a href="maintenance/customerWizard" ng-click="changeItemActive('maintenance/customerWizard')">Customer Wizard<i class="glyphicon glyphicon-chevron-right"></i></a></li>-->
+            </ul>
+        </uib-accordion-group>
+    </uib-accordion>
+</div>

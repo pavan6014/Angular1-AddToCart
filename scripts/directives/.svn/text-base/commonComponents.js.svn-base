@@ -1,0 +1,39 @@
+portal.directive('customerrequest', function() {
+    return {
+        restrict: 'A',
+        replace: true,
+        templateUrl: 'views/service/customerRequest.html'
+    };
+});
+
+portal.directive('modeminformation', function() {
+    return {
+        restrict: 'A',
+        replace: true,
+        templateUrl: 'views/service/modemInformation.html'
+    };
+});
+
+portal.directive('userinformation', function() {
+    return {
+        restrict: 'E',
+        replace: true,
+        templateUrl: 'views/service/userInformation.html'
+    };
+});
+
+portal.directive('rolespermission', function() {
+    return {
+        restrict: 'A',
+        replace: true,
+        templateUrl: 'views/admin/rolesPermission.html'
+    };
+});
+
+portal.directive('servicetype', function() {
+    return {
+        restrict: 'A',
+        replace: true,
+        templateUrl: 'views/service/serviceType.html'
+    };
+});

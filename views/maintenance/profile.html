@@ -1,0 +1,92 @@
+<div ng-controller="maintenanceController">
+
+    <div class="row">
+        <div class="col-md-3 col-sm-3 col-xs-12 left-nav-fixed padding-right-0">
+            <div maintenance-navigation class="navigationBar"></div>
+        </div>
+
+        <div class="col-md-9 col-sm-9 col-xs-12 padding-left-30 border-left-2 pull-right">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="headline"><h2>Maintenance</h2></div>
+                </div>
+            </div>
+            <div class="panel panel-default margin-bottom-40">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Profile</h3>
+                </div>
+                <div class="panel-body">
+                    <form style="border:none;">
+                        <div class="row">
+                            <section class="col col-md-9">
+
+                                <div class="colText">
+                                    <div class="row">
+                                        <div class="col-md-6"><label class="inputTextWidth">First Name:</label></div>
+                                        <div class="col-md-6" ng-hide="editProfile">{{account.firstName}}</div>
+                                        <div class="col-md-6" ng-show="editProfile"><input type="text" ng-model="account.firstName" class="form-control"></div>
+                                    </div>
+
+                                    <div class="row margin-top-10">
+                                        <div class="col-md-6"><label class="inputTextWidth">Last Name:</label></div>
+                                        <div class="col-md-6" ng-hide="editProfile">{{account.lastName}}</div>
+                                        <div class="col-md-6" ng-show="editProfile"><input type="text" ng-model="account.lastName" class="form-control"></div>
+                                    </div>
+                                    <div class="row margin-top-10">
+                                        <div class="col-md-6"><label class="inputTextWidth">Email Address:</label></div>
+                                        <div class="col-md-6" ng-hide="editProfile">{{account.email}}</div>
+                                        <div class="col-md-6" ng-show="editProfile"><input type="text" ng-model="account.email" class="form-control"></div>
+                                    </div>
+                                    <div class="row margin-top-10">
+                                         <div class="col-md-6"><label class="inputTextWidth">Phone Number:</label></div>
+                                        <div class="col-md-6" ng-hide="editProfile">{{account.phone}}</div>
+                                        <div class="col-md-6" ng-show="editProfile"><input type="text" ng-model="account.phone" class="form-control"></div>
+                                     </div>
+
+                                     <div class="row margin-top-10">
+                                         <div class="col-md-6"><label class="inputTextWidth">Street Address:</label></div>
+                                         <div class="col-md-6" ng-hide="editProfile">{{account.street}}</div>
+                                         <div class="col-md-6" ng-show="editProfile"><input type="text" ng-model="account.street" class="form-control"></div>
+                                     </div>
+                                    <div class="row margin-top-10">
+                                        <div class="col-md-6"><label class="inputTextWidth">Suite, Apt:</label></div>
+                                        <div class="col-md-6" ng-hide="editProfile">{{account.suit}}</div>
+                                        <div class="col-md-6" ng-show="editProfile"><input type="text" ng-model="account.suit" class="form-control"></div>
+                                    </div>
+                                    <div class="row margin-top-10">
+                                        <div class="col-md-6"><label class="inputTextWidth">Zip:</label></div>
+                                        <div class="col-md-6" ng-hide="editProfile">{{account.zip}}</div>
+                                        <div class="col-md-6" ng-show="editProfile"><input type="text" ng-model="account.zip" class="form-control"></div>
+                                    </div>
+                                    <div class="row margin-top-10">
+                                        <div class="col-md-6"><label class="inputTextWidth">City:</label></div>
+                                        <div class="col-md-6" ng-hide="editProfile">{{account.city}}</div>
+                                        <div class="col-md-6" ng-show="editProfile"><input type="text" ng-model="account.city" class="form-control"></div>
+                                    </div>
+                                    <div class="row margin-top-10">
+                                        <div class="col-md-6"><label class="inputTextWidth">State:</label></div>
+                                        <div class="col-md-6" ng-hide="editProfile">{{account.state}}</div>
+                                        <div class="col-md-6" ng-show="editProfile"><input type="text" ng-model="account.state" class="form-control"></div>
+                                    </div>
+                                    <div class="row margin-top-10">
+                                        <div class="col-md-6"><label class="inputTextWidth">Country:</label></div>
+                                        <div class="col-md-6" ng-hide="editProfile">{{account.country}}</div>
+                                        <div class="col-md-6" ng-show="editProfile"><input type="text" ng-model="account.country" class="form-control"></div>
+                                    </div>
+                                </div>
+
+                            </section>
+
+                        </div>
+                    </form>
+                    <div class="margin-top-15">
+                        <button class="btn btn-u" ng-init="editProfile=false" ng-click="editProfile=!editProfile">Edit</button>
+                        <button class="btn btn-u btn-u-default" ng-show="editProfile" ng-click="editProfile=false">Cancel</button>
+                       </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

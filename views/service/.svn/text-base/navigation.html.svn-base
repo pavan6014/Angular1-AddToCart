@@ -1,0 +1,18 @@
+<div>
+    <ul class="list-group sidebar-nav-v1" id="sr-sidebar-nav">
+        <li class="list-group-item list-toggle active" >
+            <a data-toggle="collapse" data-parent="#sr-sidebar-nav" href="#sr-menu"
+               class="" aria-expanded="true">Service Requests</a>
+            <ul id="sr-menu" class="collapse in" aria-expanded="true">
+                <li ng-class="{active: itemActive=='2'}"><a href="service/change-of-service" ng-click="changeItemActive('2')">Change Of Speed Tier</a></li>
+                <li ng-class="{active: itemActive=='3'}"><a href="service/replace-modem" ng-click="changeItemActive('3')">Replace Modem</a></li>
+                <li ng-class="{active: itemActive=='4'}"><a href="service/disconnect" ng-click="changeItemActive('4')">Disconnect</a></li>
+                <li ng-class="{active: itemActive=='5'}"><a href="service/cancel" ng-click="changeItemActive('5')">Cancel</a></li>
+                <li ng-class="{active: itemActive=='6'}"><a href="service/relocate-outlet" ng-click="changeItemActive('6')">Relocate Outlet</a></li>
+                <li ng-class="{active: itemActive=='7'}"><a href="service/reschedule" ng-click="changeItemActive('7')">Reschedule</a></li>
+                <li ng-class="{active: itemActive=='8'}"><a href="service/reconnect" ng-click="changeItemActive('8')">Reconnect</a></li>
+
+            </ul>
+        </li>
+    </ul>
+</div>

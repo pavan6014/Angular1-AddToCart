@@ -1,0 +1,137 @@
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="headline"><h2>Relocate Outlet</h2></div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-3">
+            <div service-navigation></div>
+            <div trouble-navigation></div>
+        </div>
+        <div class="col-sm-9">
+            <div class="row">
+                <div class="col-sm-12">
+                    <userinformation></userinformation>
+                    <div servicetype></div>
+                     <div modeminformation></div>
+
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title"><i class="fa"></i>Relocate Outlet</h3>
+                        </div>
+
+                        <div class="panel-body">
+                            <form style="border:none;">
+
+                                <div class="row margin-bottom-10">
+                                    <div class="col-sm-3">
+                                        <label class="">Buzz Code <span style="color:red;"></span></label>
+                                    </div>
+
+                                    <div class="col-sm-3">
+                                    <div class="input-group col-sm-12">
+                                        <input type="text" class="form-control">
+                                    </div>
+
+                                    </div>
+
+                                    <div class="col-sm-3">
+                                        <label class="">Phone Number <span style="color:red;"></span></label>
+                                    </div>
+
+                                    <div class="col-sm-3">
+                                        <div class="input-group col-sm-12">
+                                            <input type="text" class="form-control">
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+
+
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <label class="padding-top-40">Relocate Date <span style="color:red;"></span></label>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <label class="margin-top-10">Option 1 <span style="color:red;">*</span></label>
+                                        <div class="input-group col-sm-12">
+                                            <p class="input-group">
+                                                <input type="text" class="form-control radius-left-top-bot" uib-datepicker-popup="{{format}}" ng-model="dt" is-open="popup1.opened" min-date="minDate" max-date="maxDate" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" close-text="Close" alt-input-formats="altInputFormats" />
+                                          <span class="input-group-btn">
+                                            <button type="button" class="btn btn-default radius-right-top-bot" ng-click="openDate()"><i class="glyphicon glyphicon-calendar"></i></button>
+                                          </span>
+                                            </p>
+                                        </div>
+
+
+                                    </div>
+
+                                    <div class="col-sm-3">
+                                        <label class="margin-top-10">Option 2 <span style="color:red;">*</span></label>
+                                        <div class="input-group col-sm-12">
+                                            <p class="input-group">
+                                                <input type="text" class="form-control radius-left-top-bot" uib-datepicker-popup="{{format}}" ng-model="dt" is-open="popup1.opened" min-date="minDate" max-date="maxDate" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" close-text="Close" alt-input-formats="altInputFormats" />
+                                          <span class="input-group-btn">
+                                            <button type="button" class="btn btn-default radius-right-top-bot" ng-click="openDate()"><i class="glyphicon glyphicon-calendar"></i></button>
+                                          </span>
+                                            </p>
+                                        </div>
+
+
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <label class="margin-top-10">Option 3 <span style="color:red;">*</span></label>
+                                        <div class="input-group col-sm-12">
+                                            <p class="input-group">
+                                                <input type="text" class="form-control radius-left-top-bot" uib-datepicker-popup="{{format}}" ng-model="dt" is-open="popup1.opened" min-date="minDate" max-date="maxDate" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" close-text="Close" alt-input-formats="altInputFormats" />
+                                          <span class="input-group-btn">
+                                            <button type="button" class="btn btn-default radius-right-top-bot" ng-click="openDate()"><i class="glyphicon glyphicon-calendar"></i></button>
+                                          </span>
+                                            </p>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+
+                                <div class="row margin-top-10">
+                                    <div class="col-sm-3">
+                                        <label class="label-bar">Times of the Day <span style="color:red;"></span></label>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <select custom-select  class="form-control">
+                                            <option selected="" value="Select">Rogers(Auto-Populated)</option>
+                                            <option value="Cisco">2:00 PM to 4:00 PM</option>
+                                            <option value="Cisco">4:00 PM to 6:00 PM</option>
+                                            <option value="Cisco">6:00 PM to 8:00 PM</option>
+                                        </select>
+
+                                    </div>
+
+
+                                </div>
+                                <div class="row  margin-top-20">
+                                <div class="col-sm-6">
+
+                                    <section class="col col-12">
+                                        <button class="btn-u btn-u-default">Cancel</button>
+                                        <button class="btn-u">Submit</button>
+                                    </section>
+
+                                </div>
+                                    </div>
+
+
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div> </div>

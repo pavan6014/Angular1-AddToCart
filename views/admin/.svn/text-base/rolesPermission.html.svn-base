@@ -1,0 +1,299 @@
+<div class="container">
+    <div class="row">
+
+    </div>
+    <div class="row">
+
+        <div class="col-sm-9">
+
+            <div class="panel panel-default margin-bottom-40">
+                <div class="panel-heading">
+                    <h3 class="panel-title"><i class="fa"></i> Permissions</h3>
+                </div>
+                <div class="panel-body">
+
+                       <!-- first row--->
+                    <div class="row margin-bottom-10">
+                    <div class="col-sm-3">
+                        <input name="searchOption" type="radio" >
+                        <label>Portal Account Creation </label>
+
+                    </div>
+
+                    <div class="col-sm-3">
+                        <input name="searchOption" type="radio" >
+                        <label>Role Management</label>
+
+                    </div>
+
+                    <div class="col-sm-3">
+                        <input name="searchOption" type="radio" >
+                        <label>User Management </label>
+
+                    </div>
+                    <div class="col-sm-3">
+                        <input name="searchOption" type="radio" >
+                        <label>Product Catalogue</label>
+
+                    </div>
+
+                </div>
+                    <!-- second row--->
+                    <div class="row margin-bottom-10">
+                        <div class="col-sm-3">
+                            <input name="searchOption" type="radio" >
+                            <label>PHUB Code </label>
+
+                        </div>
+
+                        <div class="col-sm-3">
+                            <input name="searchOption" type="radio" >
+                            <label> Book New Install </label>
+
+                        </div>
+
+                        <div class="col-sm-3">
+                            <input name="searchOption" type="radio" >
+                            <label>Transfer </label>
+
+                        </div>
+                        <div class="col-sm-3">
+                            <input name="searchOption" type="radio" >
+                            <label>Move</label>
+
+                        </div>
+
+                    </div>
+                    <!-- third row--->
+                    <div class="row margin-bottom-10">
+                        <div class="col-sm-3">
+                            <input name="searchOption" type="radio" >
+                            <label>Disconnect </label>
+
+                        </div>
+
+                        <div class="col-sm-3">
+                            <input name="searchOption" type="radio" >
+                            <label>Speed Tier Change </label>
+
+                        </div>
+
+                        <div class="col-sm-3">
+                            <input name="searchOption" type="radio" >
+                            <label>Modem Replacement </label>
+
+                        </div>
+                        <div class="col-sm-3">
+                            <input name="searchOption" type="radio" >
+                            <label>Cancel Request</label>
+
+                        </div>
+
+                    </div>
+
+                    <!-- fourth row--->
+                    <div class="row margin-bottom-10">
+                        <div class="col-sm-3">
+                            <input name="searchOption" type="radio" >
+                            <label>Relocate Outlet </label>
+
+                        </div>
+
+                        <div class="col-sm-3">
+                            <input name="searchOption" type="radio" >
+                            <label>Reschedule Request </label>
+
+                        </div>
+
+                        <div class="col-sm-3">
+                            <input name="searchOption" type="radio" >
+                            <label>Reconnect Request </label>
+
+                        </div>
+                        <div class="col-sm-3">
+                            <input name="searchOption" type="radio" >
+                            <label>Miscellaneous Request</label>
+
+                        </div>
+
+                    </div>
+
+                    <!-- fifth row--->
+                    <div class="row margin-bottom-10">
+                        <div class="col-sm-3">
+                            <input name="searchOption" type="radio" >
+                            <label>RF Troubleshooting</label>
+
+                        </div>
+
+                        <div class="col-sm-3">
+                            <input name="searchOption" type="radio" >
+                            <label>Slow Speed </label>
+
+                        </div>
+
+                        <div class="col-sm-3">
+                            <input name="searchOption" type="radio" >
+                            <label>Provisioning Issue </label>
+
+                        </div>
+                        <div class="col-sm-3">
+                            <input name="searchOption" type="radio" >
+                            <label>DHCP Troubleshooting</label>
+
+                        </div>
+
+                    </div>
+
+                    <!-- sixth row--->
+                    <div class="row margin-bottom-10">
+                        <div class="col-sm-3">
+                            <input name="searchOption" type="radio" >
+                            <label>Service Routing Issue</label>
+
+                        </div>
+
+                        <div class="col-sm-3">
+                            <input name="searchOption" type="radio" >
+                            <label>Modem Diagnostic Tool </label>
+
+                        </div>
+
+                        <div class="col-sm-3">
+                            <input name="searchOption" type="radio" >
+                            <label>Capacity Request </label>
+
+                        </div>
+                        <div class="col-sm-3">
+                            <input name="searchOption" type="radio" >
+                            <label>Notifications</label>
+
+                        </div>
+
+                    </div>
+
+                    <!-- seventh row--->
+
+                    <div class="row margin-bottom-10">
+                        <div class="col-sm-3">
+                            <input name="searchOption" type="radio" >
+                            <label>Documents</label>
+
+                        </div>
+
+                        <div class="col-sm-3">
+                            <input name="searchOption" type="radio" >
+                            <label>TPIA Billing Centre</label>
+
+                        </div>
+
+                        <div class="col-sm-3">
+                            <input name="searchOption" type="radio" >
+                            <label>TPIA Queue Mgmt</label>
+
+                        </div>
+                        <div class="col-sm-3">
+                            <input name="searchOption" type="radio" >
+                            <label>TPIA Billing Centre</label>
+
+                        </div>
+
+                    </div>
+
+                    <!-- eight row--->
+                    <div class="row margin-bottom-10">
+                        <div class="col-sm-3">
+                            <input name="searchOption" type="radio" >
+                            <label>Rogers Queue Management</label>
+
+                        </div>
+
+                        <div class="col-sm-3">
+                            <input name="searchOption" type="radio" >
+                            <label>Reporting</label>
+
+                        </div>
+
+                        <div class="col-sm-3">
+                            <input name="searchOption" type="radio" >
+                            <label>Summary transaction statistics report</label>
+
+                        </div>
+                        <div class="col-sm-3">
+                            <input name="searchOption" type="radio" >
+                            <label>Summary transaction report</label>
+
+                        </div>
+
+                    </div>
+
+                    <!-- ninth row--->
+                    <div class="row margin-bottom-10">
+                        <div class="col-sm-3">
+                            <input name="searchOption" type="radio" >
+                            <label>Canned Summary transaction report </label>
+
+                        </div>
+
+                        <div class="col-sm-3">
+                            <input name="searchOption" type="radio" >
+                            <label>Canned Work / service order report</label>
+
+                        </div>
+
+                        <div class="col-sm-3">
+                            <input name="searchOption" type="radio" >
+                            <label>Queue Management Report </label>
+
+                        </div>
+                        <div class="col-sm-3">
+                            <input name="searchOption" type="radio" >
+                            <label>User Report</label>
+
+                        </div>
+
+                    </div>
+
+                    <!-- tenth row--->
+                    <div class="row margin-bottom-10">
+                        <div class="col-sm-3">
+                            <input name="searchOption" type="radio" >
+                            <label>Transaction audit report </label>
+
+                        </div>
+
+                        <div class="col-sm-3">
+                            <input name="searchOption" type="radio" >
+                            <label>Data Dump</label>
+
+                        </div>
+
+                        <div class="col-sm-3">
+                            <input name="searchOption" type="radio" >
+                            <label>Capacity report </label>
+
+                        </div>
+                        <div class="col-sm-3">
+                            <input name="searchOption" type="radio" >
+                            <label>Province</label>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <hr class="devider">
+                    <div class="row">
+                        <section class="col-sm-12">
+                            <button class="btn-u btn-u-default">Cancel</button>
+                            <button class="btn-u">Submit</button>
+                        </section>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

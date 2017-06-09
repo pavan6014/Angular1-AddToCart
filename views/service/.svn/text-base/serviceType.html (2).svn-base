@@ -1,0 +1,26 @@
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title"><i class="fa"></i>Existing Service</h3>
+    </div>
+    <div class="panel-body">
+        <form style="border:none;">
+            <div class="row">
+                <section>
+                <div class="col-sm-3">
+                    <label class="label-bar" style="">Service Type </label>
+                </div>
+                <div class="col-sm-3">
+                    <select class="form-control select-drop" custom-select model="account.serviceTier" style="padding:0px;" ng-model="account.serviceTier">
+                        <option selected="" value="TPIA Ba">15Mbps/1Mbps</option>
+                        <option value="TPIA Ba2">25Mbps/1Mbps</option>
+                        <option value="TPIA Ba3">50Mbps/1Mbps</option>
+                        <option value="TPIA Ba4">100Mbps/1Mbps</option>
+                    </select>
+
+                </div>
+                </section>
+            </div>
+
+        </form>
+    </div>
+</div>

@@ -1,0 +1,65 @@
+<div class="container" ng-controller = "myCtrl" >
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="headline"><h2>Miscellaneous Request</h2></div>
+        </div>
+    </div>
+    <div class="row">
+
+        <div class="col-sm-3">
+            <div service-navigation></div>
+            <div trouble-navigation></div>
+        </div>
+        <div class="col-sm-9">
+            <div class="row">
+                <div class="col-sm-12">
+                    <userinformation></userinformation>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title"><i class="fa"></i></h3>
+                            <div class="row margin-bottom-10">
+                            <div class="col-sm-4">
+                                <label> Additional Information 1<span style="color: red;">*</span></label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="col-sm-4">
+                                <label> Additional Information 2 <span style="color: red;">*</span></label>
+                                <input type="text" class="form-control">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="comment">Additional Information:</label>
+                                <textarea class="form-control" rows="5" id="comment"></textarea>
+                            </div>
+
+
+                            <div ng-controller = "myCtrl" >
+                                <input type="file" file-model="myFile"/>
+
+                            </div>
+
+
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <section class="button-width col col-12">
+                                    <button class="btn-u btn-u-default">Cancel</button>
+                                    <button class="btn-u">Submit</button>
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-12">
+                    <div customerrequest></div>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    </div>

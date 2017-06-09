@@ -1,0 +1,74 @@
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title"><i class="fa"></i>Account Information</h3>
+    </div>
+    <div class="panel-body">
+        <form style="border:none;">
+            <div class="row">
+                <section class="col col-md-6">
+
+                    <div class="colText">
+                        <div class="row margin-bottom-10">
+                            <div class="col-md-7"><label class="inputTextWidth">Rogers Account # :</label></div>
+                            <div class="col-md-5">{{account.tpiaNo}}</div>
+                        </div>
+
+                        <div class="row margin-bottom-10">
+                            <div class="col-md-7"><label class="inputTextWidth">First Name :</label></div>
+                            <div class="col-md-5">{{account.firstName}}</div>
+                        </div>
+                        <div class="row margin-bottom-10">
+                            <div class="col-md-7"><label class="inputTextWidth">Last Name :</label></div>
+                            <div class="col-md-5">{{account.lastName}}</div>
+                        </div>
+                        <div class="row margin-bottom-10">
+                            <div class="col-md-7"><label class="inputTextWidth"> Street Number:</label></div>
+                            <div class="col-md-5">{{account.streetNumber}} </div>
+                        </div>
+
+                        <div class="row margin-bottom-10">
+                            <div class="col-md-7"><label class="inputTextWidth"> Street Name:</label></div>
+                            <div class="col-md-5">{{account.streetName}}</div>
+                        </div>
+                        <div class="row margin-bottom-10">
+                            <div class="col-md-7"><label class="inputTextWidth"> Residential Phone #:</label></div>
+                            <div class="col-md-5">{{account.phoneNo}}</div>
+                        </div>
+                    </div>
+
+                </section>
+                <section class="col col-md-6">
+                    <div class="row margin-bottom-10">
+                        <div class="col-md-7"><label class="inputTextWidth">Street Type  :</label></div>
+                        <div class="col-md-5">{{account.streetType}}</div>
+                    </div>
+
+                    <div class="row margin-bottom-10">
+                        <div class="col-md-7"><label class="inputTextWidth">Suit/Unit:</label></div>
+                        <div class="col-md-5">{{account.suitUnit}}</div>
+                    </div>
+                    <div class="row margin-bottom-10">
+                        <div class="col-md-7"><label class="inputTextWidth">City/Muncipality :</label></div>
+                        <div class="col-md-5">{{account.cityMuncipality}}</div>
+                    </div>
+                    <div class="row margin-bottom-10">
+                        <div class="col-md-7"><label class="inputTextWidth">Postal Code:</label></div>
+                        <div class="col-md-5">{{account.postalCode}}</div>
+                    </div>
+                    <div class="row margin-bottom-10">
+                        <div class="col-md-7"><label class="inputTextWidth">Province:</label></div>
+                        <div class="col-md-5">{{account.province}}</div>
+                    </div>
+
+
+
+                </section>
+
+
+
+            </div>
+        </form>
+
+
+    </div>
+</div>

@@ -1,0 +1,88 @@
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="headline"><h2>Manage Users</h2></div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-3">
+            <div admin-navigation></div>
+        </div>
+
+        <div class="col-sm-9">
+
+            <div class="panel panel-default margin-bottom-40">
+                <div class="panel-heading">
+                    <h3 class="panel-title"><i class="fa"></i>Users</h3>
+                </div>
+                <div class="panel-body">
+                    <table class="table table-bordered" id="usersTable">
+                        <thead>
+                        <tr>
+                            <th><input type="checkbox" value=""><label></label></th>
+                            <th>User Id</th>
+                            <th>Name</th>
+                            <th>Role</th>
+                            <th>Email</th>
+                            <th>ISP Name</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td></td>
+                            <td><input class="form-control" ng-model="search.userId" type="text" value="" placeholder="search"></td>
+                            <td><input class="form-control"  ng-model="search.name" type="text" value="" placeholder="search"></td>
+                            <td>
+                                <select custom-select  class="form-control" ng-model="search.role" type="text" value="" placeholder="search">
+                                    <option value="Rogers Admin">Rogers Admin</option>
+                                    <option value="TPIA Admin">TPIA Admin</option>
+                                    <option value="CSR">CSR</option>
+                                    <option value="">All</option>
+                                </select>
+                            </td>
+                            <td><input class="form-control"  ng-model="search.email" type="text" value="" placeholder="search"></td>
+                            <td>
+                                <select custom-select  class="form-control" ng-model="search.ispname" type="text" value="" placeholder="search">
+                                    <option value="CIK">CIK</option>
+                                    <option value="TechSavvy">TechSavvy</option>
+                                    <option value="ComWave">ComWave</option>
+                                    <option value="">All</option>
+                                </select>
+                            </td>
+                            <td><select custom-select  class="form-control" ng-model="search.status" type="text" value="" placeholder="search">
+                                <option value="Active">Active</option>
+                                <option value="Deactivated">Inactive</option>
+                                <option value="">Both</option>
+                            </select></td>
+                            <td></td>
+                        </tr>
+                        <tr ng-repeat="user in users | filter:search">
+                            <td><input type="checkbox" id='{{$index}}' value=""><label></label></td>
+                            <td>{{user.userId}}</td>
+                            <td>{{user.name}}</td>
+                            <td>{{user.role}}</td>
+                            <td>{{user.email}}</td>
+                            <td>{{user.ispname}}</td>
+                            <td><div ng-class="{Active:'', Deactivated:'', '':'hidden'}[user.status]">{{user.status}}</div></td>
+                            <td>
+                                <a href="javascript:void();" ng-click="popupModalController({selectedUserIndex:$index,users:user},addEditAdminUsers,'myModalContent')"><i class="fa fa-pencil"></i>Edit</a>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="margin-top-15">
+                        <button class="btn btn-u">Activate</button>
+                        <button class="btn btn-u btn-u-default">Deactivate</button>
+                        <button class="btn btn-u" ng-click="popupModalController({selectedUserIndex:-1,users:{}},addEditAdminUsers,'myModalContent')">Add</button>
+                        <button class="btn btn-u btn-u-default" ng-click="deleteRows()">Delete</button>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

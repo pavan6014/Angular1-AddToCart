@@ -1,0 +1,682 @@
+var portal = angular.module('portal', ['ngRoute', 'ui.bootstrap','ngAnimate']);
+
+portal.controller('MainController', function($scope, $route, $routeParams, $location, $uibModal,$rootScope) {
+
+ $scope.inputTranscationReadOnly = true;
+ $scope.submitForgetPassword=function(forgetPwdEmail){
+if(typeof(forgetPwdEmail)!='undefined'){
+$scope.responseMsgfrgtPwd='A mail is sent to your mail id Kindly follow the steps mentioned in the mail.';
+}
+}
+
+$scope.submitResetPassword=function(password){
+     if(typeof(password.oldPassword)!='undefined' && typeof(password.newPassword)!='undefined' && typeof(password.confirmNewPassword)!='undefined'){
+     $scope.responseMessage='The password is reset Kindly';
+     }
+
+}
+$scope.accounts = [
+              { tpiaNo: 109097168404, firstName: 'Ravi', lastName: 'Jayanthi', phoneNo : '+1 (401) 122-9876', address : '9 Wieuca Trace, Buckhead, GA 30318', modemModel: 'REQued678',modemMAC: 'MAC838430305340',modemESN: 'ESN9395934953',serviceType:"TPIA",productCode:"TCYB",serviceTier:"TPIA Ba",serviceSpeed:"60mbps",billingEntity:"Teksavvy",billTo:"Residential",modemType:"Rogers",purchaseDate:"01/29/2016",streetNumber:"34",streetName:"Test Street",streetType:"Main",suitUnit:"2",cityMuncipality:"Brompton",postalCode:"534231", province:"No", CustomerTransHistory : [{transactionID:'1234567',transactionType:'Move Service',transactionDate:'01/08/2016 10:10:00',status:'In Progress'},{transactionID:'1234567',transactionType:'New Installation',transactionDate:'01/08/2016 10:10:00',status:'Created'},{transactionID:'3456789',transactionType:'RF Troubleshooting',transactionDate:'01/08/2016 10:10:00',status:'In Progress'}]},
+              { tpiaNo: 109097268404, firstName: 'Suresh', lastName: 'Kumar', phoneNo : '+1 (603) 858-2782', address : '2210 Peachford Cir, Dunwoody, GA 30338' , modemModel: 'REQued678',modemMAC: 'MAC838430305340',modemESN: 'ESN9395934953',serviceType:"TPIA",productCode:"TCYB",serviceTier:"TPIA Ba",serviceSpeed:"70mbps",billingEntity:"Teksavvy",billTo:"Residential",modemType:"Rogers",purchaseDate:"03/29/2016",streetNumber:"35",streetName:"Test Street1",streetType:"Main",suitUnit:"3",cityMuncipality:"Lilburn",postalCode:"534242",province:"Yes", CustomerTransHistory : [{transactionID:'1234567',transactionType:'Move Service',transactionDate:'01/08/2016 10:10:00',status:'In Progress'},{transactionID:'1234567',transactionType:'Move Service',transactionDate:'01/08/2016 10:10:00',status:'In Progress'}]},
+              { tpiaNo: 129097166590, firstName: 'Maneksha', lastName: 'Basheer', phoneNo : '+1 (746) 891-0041', address : '8719 Ashford Cir, Dunwoody, GA 30335' , modemModel: 'REQued678',modemMAC: 'MAC838430305340',modemESN: 'ESN9395934953',serviceType:"TPIA",productCode:"TCYB",serviceTier:"TPIA Ba",serviceSpeed:"60mbps",billingEntity:"Teksavvy",billTo:"Residential",modemType:"Rogers",purchaseDate:"01/29/2016",streetNumber:"36",streetName:"Test Street2",streetType:"Main",suitUnit:"4",cityMuncipality:"GA", postalCode:"534232",province:"NO", CustomerTransHistory : [{transactionID:'1234567',transactionType:'Move Service',transactionDate:'01/08/2016 10:10:00',status:'In Progress'},{transactionID:'1234567',transactionType:'Move Service',transactionDate:'01/08/2016 10:10:00',status:'In Progress'}]},
+              { tpiaNo: 107897123404, firstName: 'Dilip', lastName: 'Khanolkar', phoneNo : '7645110981', address : '564 Milton Parkway, East Cobb, GA 12890', modemModel: 'REQued678',modemMAC: 'MAC838430305340',modemESN: 'ESN9395934953',serviceType:"TPIA",productCode:"TCYB",serviceTier:"TPIA Ba",serviceSpeed:"60mbps",billingEntity:"Teksavvy",billTo:"Residential",modemType:"Rogers",purchaseDate:"03/29/2016",streetNumber:"37",streetName:"Test Street3",streetType:"Main",suitUnit:"5",cityMuncipality:"Atlanta",postalCode:"534233",province:"NO", CustomerTransHistory : [{transactionID:'1234567',transactionType:'Move Service',transactionDate:'01/08/2016 10:10:00',status:'In Progress'},{transactionID:'1234567',transactionType:'Move Service',transactionDate:'01/08/2016 10:10:00',status:'In Progress'}]},
+              { tpiaNo: 119097168569, firstName: 'Anil', lastName: 'Pantangi', phoneNo : '6745574868', address : '2210 Peachford Cir, Dunwoody, GA 30338', modemModel: 'REQued678',modemMAC: 'MAC838430305340',modemESN: 'ESN9395934953',serviceType:"TPIA",productCode:"TCYB",serviceTier:"TPIA Ba",serviceSpeed:"70mbps",billingEntity:"Teksavvy",billTo:"Residential",modemType:"Rogers",purchaseDate:"05/29/2016",streetNumber:"38",streetName:"Test Street4",streetType:"Main",suitUnit:"6",cityMuncipality:"SA",postalCode:"534234",province:"Yes", CustomerTransHistory : [{transactionID:'1234567',transactionType:'Move Service',transactionDate:'01/08/2016 10:10:00',status:'In Progress'},{transactionID:'1234567',transactionType:'Move Service',transactionDate:'01/08/2016 10:10:00',status:'In Progress'}]},
+              { tpiaNo: 149097168404, firstName: 'Pinakini', lastName: 'Chintakunta', phoneNo : '6534653799', address : '7569 Spadling Dr, Lilburn, GA 30494', modemModel: 'Cisco K283',modemMAC: 'MAC838430305340',modemESN: 'ESN9395934953',serviceType:"TPIA",productCode:"TCYB",serviceTier:"TPIA Ba",serviceSpeed:"60mbps",billingEntity:"Teksavvy",billTo:"Residential",modemType:"Cisco",purchaseDate:"01/29/2016",streetNumber:"39",streetName:"Test Street5",streetType:"Main",suitUnit:"7",cityMuncipality:"Downtown",postalCode:"534235",province:"NO", CustomerTransHistory : [{transactionID:'1234567',transactionType:'Move Service',transactionDate:'01/08/2016 10:10:00',status:'In Progress'},{transactionID:'1234567',transactionType:'Move Service',transactionDate:'01/08/2016 10:10:00',status:'In Progress'}]},
+              { tpiaNo: 109023823465, firstName: 'Another', lastName: 'Suresh', phoneNo : '3546775723', address : '2210 Peachford Cir, Dunwoody, GA 30338', modemModel: 'REQued678',modemMAC: 'MAC838430305340',modemESN: 'ESN9395934953',serviceType:"TPIA",productCode:"TCYB",serviceTier:"TPIA Ba",serviceSpeed:"70mbps",billingEntity:"Teksavvy",billTo:"Residential",modemType:"Rogers",purchaseDate:"03/29/2016",streetNumber:"32",streetName:"Test Street6",streetType:"Main",suitUnit:"8",cityMuncipality:"NY",postalCode:"534236",province:"Yes", CustomerTransHistory : [{transactionID:'1234567',transactionType:'Move Service',transactionDate:'01/08/2016 10:10:00',status:'In Progress'},{transactionID:'1234567',transactionType:'Move Service',transactionDate:'01/08/2016 10:10:00',status:'In Progress'}]},
+              { tpiaNo: 119097168404, firstName: 'Jim', lastName: 'Carrey', phoneNo : '7988121244', address : '7823 Down the lane, Somewhere, ON 30338', modemModel: 'Cisco K283',modemMAC: 'MAC838430305340',modemESN: 'ESN9395934953',serviceType:"TPIA",productCode:"TCYB",serviceTier:"TPIA Ba",serviceSpeed:"60mbps",billingEntity:"Teksavvy",billTo:"Residential",modemType:"Cisco",purchaseDate:"01/04/2016",streetNumber:"33",streetName:"Test Street7",streetType:"Main",suitUnit:"9",cityMuncipality:"Donwoody",postalCode:"534237",province:"NO", CustomerTransHistory : [{transactionID:'1234567',transactionType:'Move Service',transactionDate:'01/08/2016 10:10:00',status:'In Progress'},{transactionID:'1234567',transactionType:'Move Service',transactionDate:'01/08/2016 10:10:00',status:'In Progress'}]},
+              { tpiaNo: 155458023434, firstName: 'Anna', lastName: 'Paquin', phoneNo : '7438830900', address : '7622 Steet highway, Unkown, TO 30338', modemModel: 'REQued678',modemMAC: 'MAC838430305340',modemESN: 'ESN9395934953',serviceType:"TPIA",productCode:"TCYB",serviceTier:"TPIA Ba",serviceSpeed:"60mbps",billingEntity:"Teksavvy",billTo:"Residential",modemType:"Rogers",purchaseDate:"01/29/2016",streetNumber:"31",streetName:"Test Street8",streetType:"Main",suitUnit:"1",cityMuncipality:"ON",postalCode:"534238",province:"Yes", CustomerTransHistory : [{transactionID:'999999',transactionType:'Move Service',transactionDate:'01/08/2016 10:10:00',status:'In Progress'},{transactionID:'1234567',transactionType:'Move Service',transactionDate:'01/08/2016 10:10:00',status:'In Progress'}]},
+              { tpiaNo: 119097168673, firstName: 'Donald', lastName: 'Sutherland', phoneNo : '6893772663', address : '78 Auburn Ct, Donwtown, CU 30338', modemModel: 'Cisco K283',modemMAC: 'MAC838430305340',modemESN: 'ESN9395934953',serviceType:"TPIA",productCode:"TCYB",serviceTier:"TPIA Ba",serviceSpeed:"80mbps",billingEntity:"Teksavvy",billTo:"Residential",modemType:"Cisco",purchaseDate:"01/10/2016",streetNumber:"30",streetName:"Test Street9",streetType:"Main",suitUnit:"12",cityMuncipality:"TS",postalCode:"534238",province:"NO", CustomerTransHistory : [{transactionID:'1234567',transactionType:'Move Service',transactionDate:'01/08/2016 10:10:00',status:'In Progress'},{transactionID:'1234567',transactionType:'Move Service',transactionDate:'01/08/2016 10:10:00',status:'In Progress'}]}
+          ];
+
+$scope.account = {};
+$scope.accountIndex=0;
+
+$scope.loadAccount = function(tpiaNo){
+          angular.forEach($scope.accounts, function(value,index) {
+              if(value){
+                if (tpiaNo == value['tpiaNo']){
+                    $scope.account = value;
+                    $scope.accountIndex=index;
+                }
+              }
+          });
+     }
+
+$scope.gettransactionID=function(){return Math.floor((Math.random() * 10000000) + 1)};
+
+
+$scope.validateModemDetails = function(){
+$scope.successMessage.newModemValidated.msg="New modem details are successfully validated!";
+};
+
+
+$scope.addNewModemDetails = function(){
+var transactionID=$scope.gettransactionID();
+$scope.successMessage.newTransactionAdded.msg="Transaction ID: " + transactionID + " New Modem details are successfully added to the account";
+var currentDate=new Date();
+var date=(currentDate.getMonth()<10?'0'+(currentDate.getMonth()+1):(currentDate.getMonth()+1))+"/"+currentDate.getDate()+"/"+currentDate.getFullYear();
+var currentTime=currentDate.getHours()+":"+currentDate.getMinutes()+":"+currentDate.getSeconds();
+$scope.account.CustomerTransHistory.push({transactionID:transactionID,transactionType:'Move Service',transactionDate:date,transactionTime:currentTime});
+$scope.accounts[$scope.accountIndex]=$scope.account;
+};
+
+$scope.successMessage={
+newModemValidated:{msg:"",status:false},
+newTransactionAdded:{msg:"",status:false}
+};
+
+$scope.submitAccountdetails = function(){
+
+$scope.accounts[$scope.accountIndex]=$scope.account;
+
+};
+
+$scope.purchaseDate=new Date($scope.account.purchaseDate);
+$scope.format='MM/dd/yyyy';
+    $scope.today = function() {
+      $scope.purchaseDate = new Date();
+   };
+    $scope.today();
+
+$scope.disabled = function(date, mode) {
+    return false;/*mode === 'day' && (date.getDay() === 0 || date.getDay() === 6);*/
+  };
+
+$scope.minDate = new Date(); //for min date as today
+$scope.maxDate = new Date(2020, 5, 22);
+$scope.openDate = function() {
+     $scope.popup1.opened = true;
+   };
+
+
+$scope.popup1 = {
+  opened: false
+};
+$scope.popup2 = {
+  opened: false
+};
+$scope.popup3 = {
+  opened: false
+};
+$scope.popup4 = {
+  opened: false
+};
+$scope.dateOptions = {
+    formatYear: 'yy',
+    startingDay: 1
+  };
+
+  $scope.altInputFormats = ['M!/d!/yyyy'];
+
+
+     $scope.$route = $route;
+     $scope.$location = $location;
+     $scope.$routeParams = $routeParams;
+
+     $scope.title = 'TPIA Portal';
+
+     $scope.loggedIn = false;
+
+     $scope.login = function(){
+        $scope.loggedIn = true;
+     };
+
+     $scope.logout = function(){
+        $scope.loggedIn = false;
+     }
+
+     $scope.showSearchResult = false;
+
+     $scope.queryBy = {
+          postalCode: '',
+          tpiaNo : '',
+          searchOption: 'tpiaNo'
+     }
+
+    $scope.buttonNavigate = function ( path ) {
+      $location.path( path );
+    };
+
+     $scope.roles = [
+          { role: 'Rogers Admin', description : 'The super admin Rogers Admin Role', status:"Active"},
+          { role: 'TPIA Admin', description : 'The TPIA admin Role', status:"Active"},
+          { role: 'ISP', description : 'ISP Role', status:"Inactive"},
+          { role: 'TPIACSR', description : 'The CSR Role', status:"Active"}
+      ]
+
+    $scope.users = [
+          { userId: 'jc651k', name: 'Jim Carry', role: 'Rogers Admin', email : 'jim.carrey@rogers.com', ispname:'CIK', status:"Active"},
+          { userId: 'sr879k', name: 'Seth Rogen', role: 'TPIA Admin', email : 'seth.rogen@rogers.com', ispname:'TechSavvy', status:"Active"},
+          { userId: 'jc651k', name: 'Ryan Gosling', role: 'CSR', email : 'ryan.gosling@rogers.com', ispname:'ComWave', status:"Inactive"}
+      ]
+
+    $scope.notifications = [
+          { notificationId: '001', tpiaName: 'CIK', title: 'PHUB Down', description : 'PHUB# 056 is Down due to...', startDate: '2016-02-15 00:00:00', endDate: "2016-02-15 00:00:00", status: "Active"},
+          { notificationId: '001', tpiaName: 'ComWave', title: 'Upgrade', description : 'System ABC upgrade is scheduled for..', startDate: '2016-01-15 00:00:00', endDate: "2016-02-02 00:00:00", status: "Inactive"}
+      ]
+
+    $scope.reports =[
+          { serviceProvider: 'TekSavvy', bookInstall: '297', transfer : '111',move:'79',transaction4:'18',transaction5:'536',transaction6:'448',mdtqQ:'913',accountQuery:'7583',total:'9985'},
+          { serviceProvider: 'Distributel', bookInstall: '36', transfer : '1',move:'79',transaction4:'18',transaction5:'0',transaction6:'1',mdtqQ:'0',accountQuery:'7583',total:'1220'},
+          { serviceProvider: 'ISP3', bookInstall: '4', transfer : '1',move:'79',transaction4:'18',transaction5:'0',transaction6:'1',mdtqQ:'0',accountQuery:'6',total:'45'},
+          { serviceProvider: 'ISP4', bookInstall: '45', transfer : '1',move:'0',transaction4:'0',transaction5:'0',transaction6:'5',mdtqQ:'1',accountQuery:'89',total:''}
+    ]
+
+    $scope.updateTPIA =[
+              { name: 'CIK', becode: 'C044', email : 'info@cik.com',status:'Active'},
+              { name: 'ComWave', becode: 'C046', email : 'info@comwave.com',status:'Active'},
+              { name: 'TechSavvy', becode: 'C051', email : 'info@techsavvy.com',status:'Active'}
+    ]
+
+      $scope.productCatalog={};
+      $scope.productCatalog.servicingAreas =   [
+                { beCode: '0', pHUBCode: '1', pHUBDescription: 'Rogers Admin', pHUBProvince : '1', pHUBFeedType: '1',  PHUBPoiType: '1',  PHUBMaximumUplink: '1', PHUBMaximumDownlink: '1',  PHUBServingAreaStatus: '1', ServiceProductCode:'1123', ServiceProductCodeDescription:'TPIA', DeviceProductCodeMinimum:'1', PHUBStatus:'1' },
+                { beCode: '1', pHUBCode: '2', pHUBDescription: 'Rogers managers', pHUBProvince : '2', pHUBFeedType: '2',  PHUBPoiType: '2',  PHUBMaximumUplink: '2', PHUBMaximumDownlink: '2',  PHUBServingAreaStatus: '2', ServiceProductCode:'1234', ServiceProductCodeDescription:'Rogers Manager', DeviceProductCodeMinimum:'2', PHUBStatus:'2' },
+                 { beCode: '2', pHUBCode: '3', pHUBDescription: 'Rogers Supervisior', pHUBProvince : '3', pHUBFeedType: '3',  PHUBPoiType: '3',  PHUBMaximumUplink: '3', PHUBMaximumDownlink: '3',  PHUBServingAreaStatus: '1', ServiceProductCode:'1235', ServiceProductCodeDescription:'Rogers Supervisior', DeviceProductCodeMinimum:'3', PHUBStatus:'3'  }
+            ];
+
+$scope.productCatalog.servicingArea;
+      $scope.loadProductCatalogSA = function(beCode){
+               angular.forEach($scope.productCatalog.servicingAreas, function(value,index) {
+                    if(value){
+                      if (beCode == value['beCode']){
+                          $scope.productCatalog.servicingArea = value;
+                          $scope.productCatalogSAIndex=index;
+                      }
+                    }
+                });
+           }
+
+//common controller for all the popups
+
+$scope.popupModalController =  function(popupData,popupCallback,templateUrl){
+console.log("popup data "+JSON.stringify(popupData));
+    var popupModalInstance = $uibModal.open({
+         animation: true,
+         templateUrl: templateUrl+'.html',
+         controller: 'commonPopupInstanceCtrl',
+         resolve: {
+           popupData: popupData
+           }
+    });
+
+    popupModalInstance.result.then(function (popupData) {
+          popupCallback(popupData);
+        }, function () {
+          console.log('Modal dismissed at: ' + new Date());
+        });
+};
+
+//add and edit user details in Administration -> manage users
+$scope.addEditAdminUsers = function(popupData){
+if(popupData.selectedUserIndex===-1)
+$scope.users.push(popupData.users);
+else
+$scope.users[popupData.selectedUserIndex] = popupData.users;
+}
+
+$scope.showTransactionDetails = function(popupData){
+
+console.log(JSON.stringify(popupData));
+
+}
+
+
+     $scope.openPopup = function () {
+               var popmodalInstance = $uibModal.open({
+                 animation: true,
+                 templateUrl: 'myTranscationDetails.html',
+                 controller: 'popupInstanceCtrl',
+                 resolve: {
+                   items: function () {
+                     $scope.inputTranscationReadOnly = false;
+                     return $scope.items;
+                   }
+                 }
+            });
+          }
+
+        $scope.openPopupEdit = function (index) {
+                      var popmodalInstance = $uibModal.open({
+                        animation: true,
+                        templateUrl: 'myTranscationDetails.html',
+                        controller: 'popupInstanceCtrl',
+                        resolve: {
+                          items: function () {
+                            $scope.inputTranscationReadOnly = false;
+                            return $scope.items;
+                          }
+                        }
+                   });
+                 }
+
+      $scope.launchPopup = function () {
+                    var popmodalInstance = $uibModal.open({
+                      animation: true,
+                      templateUrl: 'launchRogers.html',
+                      controller: 'launchRogersInstanceCtrl',
+                      resolve: {
+                        items: function () {
+                          return $scope.items;
+                        }
+                      }
+                 });
+               }
+      $scope.notificationPopup = function (temp) {
+                              var popmodalInstance = $uibModal.open({
+                                animation: true,
+                                templateUrl: 'notification.html',
+                                controller: 'notificationInstanceCtrl',
+                                resolve: {
+                                  items: function () {
+                                    return $scope.items;
+                                  }
+                                }
+                           });
+                           if(temp == "add")
+                           $scope.notificationPopupAdd =true;
+                         }
+
+
+          $scope.updateTPIAPopup = function (index) {
+                                       var popmodalInstance = $uibModal.open({
+                                         animation: true,
+                                         templateUrl: 'updateTPIA.html',
+                                         controller: 'updateTPIAInstanceCtrl',
+                                         resolve: {
+                                           items: function () {
+                                             return $scope.items;
+                                           }
+                                         }
+                                    });
+                                  }
+          $scope.updateRogersPopup = function (index) {
+                                                  var popmodalInstance = $uibModal.open({
+                                                    animation: true,
+                                                    templateUrl: 'updateRogers.html',
+                                                    controller: 'updateRogersInstanceCtrl',
+                                                    resolve: {
+                                                      items: function () {
+                                                        return $scope.items;
+                                                      }
+                                                    }
+                                               });
+                                             }
+
+
+          $scope.updateRogersUserPopup = function (index) {
+                                                     var popmodalInstance = $uibModal.open({
+                                                      animation: true,
+                                                      templateUrl: 'updateRogersUser.html',
+                                                      controller: 'updateRogersUserInstanceCtrl',
+                                                              resolve: {
+                                                                items: function () {
+                                                                  return $scope.items;
+                                                                }
+                                                              }
+                                                         });
+                                                       }
+
+     $scope.deleteRolesPopup = function (index) {
+                                                                var popmodalInstance = $uibModal.open({
+                                                                 animation: true,
+                                                                 templateUrl: 'deleteRole.html',
+                                                                 controller: 'deleteRoleInstanceCtrl',
+                                                                         resolve: {
+                                                                           items: function () {
+                                                                             return $scope.items;
+                                                                           }
+                                                                         }
+                                                                    });
+                                                                  }
+
+
+     $scope.cancelPopup = function (index) {
+         var popmodalInstance = $uibModal.open({
+                                      animation: true,
+                                    templateUrl: 'cancelPopup.html',
+                                     controller: 'cancelPopupInstanceCtrl',
+                                        resolve: {
+                                                  items: function () {
+                                                  return $scope.items;
+                                                  }
+            }
+         });
+         }
+
+     $scope.deleteRows = function(){
+         var deletedIndex=0;
+         $('#usersTable tr td input[type="checkbox"]:checked').each(function(){
+         var id=$(this).attr('id')-deletedIndex;
+         if(id>-1)
+         $rootScope.users.splice(id,1);
+         deletedIndex++;
+         });
+     };
+
+     //Troubleshooting
+
+    $scope.troubleShootingModules={
+     "rf":{
+     moduleName:"RF Troubleshooting",
+     questionSet:["Was the modem ESN confirmed with the customer?"," Was the modem MAC Address confirmed with the customer?","Is the problem intermittent?","Has the customer confirmed the modem is NOT in standby mode?","Has the customer performed a factory reset on the modem?","Is the modem plugged directly into a wall power outlet?","Is the modem located in the original installation location?"]
+
+     },
+     "slow-speed":{
+     moduleName:"Slow Speed",
+     questionSet:["Was the modem ESN confirmed with the customer?","Was the modem MAC Address confirmed with the customer?","Has the customer confirmed the modem is NOT in standby mode?","Has the customer performed a factory reset on the modem?","Has the computer been connected directly to the modem (i.e. no HUB, Router, etc)","Has the RJ45 or USB cable been replaced?","Has the RJ45 or USB cable been reseated?","Has the customer tested another NIC or computer?","Has DHCP been configured dynamically?","Has TCP/IP been installed properly?","Has the NIC driver been uninstalled and reinstalled?"]
+
+     },
+      "prov-issue":{
+     moduleName:"Provisioning Issue",
+     questionSet:["Did the customer miss their scheduled installation date?","Was the modem ESN confirmed with the customer?","Was the modem MAC Address confirmed with the customer?"," Is the customer getting the Rogers Splash screen?"]
+     },
+      "dhcp":{
+     moduleName:"DHCP Troubleshooting",
+     questionSet:["Was the modem ESN confirmed with the customer?","Was the modem MAC Address confirmed with the customer?","Has the customer confirmed the modem is NOT in standby mode?","Has the customer performed a factory reset on the modem?","Has the computer been connected directly to the modem (i.e. no HUB, Router, etc)","Has the firewall been disabled?","Has DHCP been configured dynamically?","Has TCP/IP been installed properly?","Has the NIC driver been uninstalled and reinstalled?","Has the IP address been released/renewed 5 or more times?","Is the LINK light on the back of the modem on?","Is the LINK light on the connected PC network adapter on?","Has the RJ45 or USB cable been replaced?","Has the RJ45 or USB cable been reseated?","Has the customer tested another network adapter or computer?","Can the customer ping 127.0.0.1?"]
+     },
+      "routing":{
+     moduleName:"Service Routing Issue",
+     questionSet:["Has the customer confirmed the modem is NOT in standby mode?","Has the customer performed a factory reset on the modem?","Has the customer tested the connection with another computer?"]
+     }
+     };
+
+     $scope.currentTSModule={};
+
+     $scope.setCurrentTSModule = function(module){
+     $scope.currentTSModule=$scope.troubleShootingModules[module];
+     };
+
+  $scope.troubleShootRfSubmit=function()
+  {
+  console.log("called");
+  console.log($scope.radioYes);
+  };
+  
+//change function for navigation
+
+$scope.changeItemActive = function(option){
+
+$scope.itemActive = option;
+};
+
+
+$scope.gotoMiscRequest = function(radioBtnvalue){
+   console.log("$scope.radioExsCustomer::",radioBtnvalue);
+   if($scope.radioExsCustomer == "yes")
+   {
+   console.log("first page");
+   }
+   else
+   {
+   console.log("second page");
+   }
+}
+
+})
+
+/*portal.controller('ModalInstanceCtrlUsers', function ($scope, $uibModalInstance, selectedUserIndex, $rootScope) {
+      if($rootScope.users[selectedUserIndex]) {
+           $scope.users=$rootScope.users[selectedUserIndex];
+           $scope.headername="Edit User Details";
+       }
+        else{
+            $scope.users={};
+            $scope.headername="Add New User";
+        }
+
+       $scope.ok = function () {
+          var users = $scope.users;
+          if(selectedUserIndex===-1)
+          $rootScope.users.push(users);
+          $uibModalInstance.close();
+       };
+
+       $scope.cancel = function () {
+         $uibModalInstance.dismiss('cancel');
+       };
+});*/
+
+/* common controller for all the popups*/
+portal.controller('commonPopupInstanceCtrl', function ($scope, $uibModalInstance, popupData) {
+    $scope.popupData = popupData;
+
+    $scope.ok = function () {
+       $uibModalInstance.close($scope.popupData);
+    };
+
+    $scope.cancel = function () {
+      $uibModalInstance.dismiss('cancel');
+    };
+
+});
+
+portal.controller('popupInstanceCtrl', function ($scope, $uibModalInstance, items, $rootScope) {
+
+    $scope.ok = function () {
+  /*var users = $scope.users;
+      $rootScope.users.push(users);
+       $uibModalInstance.close();*/
+    };
+
+    $scope.cancel = function () {
+      $uibModalInstance.dismiss('cancel');
+    };
+
+});
+
+portal.controller('launchRogersInstanceCtrl', function ($scope, $uibModalInstance, items, $rootScope) {
+
+    $scope.ok = function () {
+  /*var users = $scope.users;
+      $rootScope.users.push(users);
+       $uibModalInstance.close();*/
+    };
+
+    $scope.cancel = function () {
+      $uibModalInstance.dismiss('cancel');
+    };
+
+});
+
+portal.controller('notificationInstanceCtrl', function ($scope, $uibModalInstance, items, $rootScope) {
+
+    $scope.ok = function () {
+  /*var users = $scope.users;
+      $rootScope.users.push(users);
+       $uibModalInstance.close();*/
+    };
+
+    $scope.cancel = function () {
+      $uibModalInstance.dismiss('cancel');
+    };
+
+});
+
+
+
+portal.controller('updateTPIAInstanceCtrl', function ($scope, $uibModalInstance, items, $rootScope) {
+
+    $scope.ok = function () {
+  /*var users = $scope.users;
+      $rootScope.users.push(users);
+       $uibModalInstance.close();*/
+    };
+
+    $scope.cancel = function () {
+      $uibModalInstance.dismiss('cancel');
+    };
+
+});
+
+
+portal.controller('updateRogersInstanceCtrl', function ($scope, $uibModalInstance, items, $rootScope) {
+
+    $scope.ok = function () {
+      /*var users = $scope.users;
+          $rootScope.users.push(users);
+           $uibModalInstance.close();*/
+    };
+
+    $scope.cancel = function () {
+      $uibModalInstance.dismiss('cancel');
+    };
+
+});
+
+
+portal.controller('updateRogersUserInstanceCtrl', function ($scope, $uibModalInstance, items, $rootScope) {
+
+    $scope.ok = function () {
+       /*var users = $scope.users;
+      $rootScope.users.push(users);
+       $uibModalInstance.close();*/
+    };
+
+    $scope.cancel = function () {
+      $uibModalInstance.dismiss('cancel');
+    };
+
+});
+
+
+portal.controller('deleteRoleInstanceCtrl', function ($scope, $uibModalInstance, items, $rootScope) {
+
+    $scope.yes = function () {
+       /*var users = $scope.users;
+      $rootScope.users.push(users);
+       $uibModalInstance.close();*/
+    };
+
+    $scope.cancel = function () {
+      $uibModalInstance.dismiss('cancel');
+    };
+
+});
+
+portal.controller('cancelPopupInstanceCtrl', function ($scope, $uibModalInstance, items, $rootScope) {
+
+    $scope.yes = function () {
+       /*var users = $scope.users;
+      $rootScope.users.push(users);
+       $uibModalInstance.close();*/
+    };
+
+    $scope.cancel = function () {
+      $uibModalInstance.dismiss('cancel');
+    };
+
+});
+
+portal.config(function ($routeProvider, $locationProvider, $provide) {
+    $routeProvider
+     .when('/:module/:action', {
+        controller: 'RouteCtrl',
+        templateUrl: function(params){
+            if (params.action === 'logout'){
+                return 'views/account/landing.html';
+            } else if (params.action === 'new'){
+                return 'views/service/new-install.html';
+            } else if (params.action === 'existing'){
+                return 'views/account/manage.html';
+            }else if (params.action === 'transfer'){
+                return 'views/account/transfer.html';
+            }
+            else if (params.action === 'move'){
+                return 'views/account/move.html';
+            }
+            else if (params.action === 'misc'){
+                            return 'views/account/misc-submit.html';
+                        }
+
+             else{
+                return 'views' + '/' + params.module + '/' + params.action + '.html'
+            }
+        }
+     })
+    .otherwise({
+         templateUrl: 'views/account/landing.html'
+    });
+
+     // configure html5 to get links working on jsfiddle
+     $locationProvider.html5Mode(true);
+
+});
+
+portal.controller('RouteCtrl', function($scope, $routeParams) {
+     if ($routeParams.action === 'logout'){
+        $scope.logout();
+     }
+     if ($routeParams.action === 'existing'){
+        $scope.loadAccount($scope.queryBy.tpiaNo);
+     }
+
+
+
+
+});
+
+portal.controller('myCtrl', ['$scope', 'fileUpload', function($scope, fileUpload){
+            $scope.uploadFile = function(){
+               var file = $scope.myFile;
+
+               console.log('file is ' );
+               console.dir(file);
+
+               var uploadUrl = "/fileUpload";
+               fileUpload.uploadFileToUrl(file, uploadUrl);
+            };
+         }]);
+
+
+
+
+portal.service('fileUpload', ['$http', function ($http) {
+            this.uploadFileToUrl = function(file, uploadUrl){
+               var fd = new FormData();
+               fd.append('file', file);
+
+               $http.post(uploadUrl, fd, {
+                  transformRequest: angular.identity,
+                  headers: {'Content-Type': undefined}
+               })
+
+               .success(function(){
+               })
+
+               .error(function(){
+               });
+            }
+         }]);
+
+
+portal.controller('AccordionCtrl', function ($scope) {
+$scope.oneAtATime = true;
+
+$scope.roles = ['Rogers Admin','Rogers Supervisior','Rogers Manager', 'Rogers CSR','TPIA Admin','TPIA Manager','TPIA CSR','TPIA Technical Support','TPIA Supervisior','TPIA Billing Analyst'];
+
+
+$scope.groups = [
+{
+title: 'Dynamic Group Header - 1',
+content: 'Dynamic Group Body - 1'
+},
+{
+title: 'Dynamic Group Header - 2',
+content: 'Dynamic Group Body - 2'
+}
+];
+
+$scope.items = ['Item 1', 'Item 2', 'Item 3'];
+
+$scope.addItem = function() {
+var newItemNo = $scope.items.length + 1;
+$scope.items.push('Item ' + newItemNo);
+};
+
+$scope.status = {
+isFirstOpen: true,
+isFirstDisabled: false
+};
+});
+

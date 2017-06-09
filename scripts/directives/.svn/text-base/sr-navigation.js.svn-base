@@ -1,0 +1,7 @@
+portal.directive('serviceNavigation', function() {
+    return {
+        restrict: 'A',
+        replace: true,
+        templateUrl: 'views/service/navigation.html'
+    };
+});

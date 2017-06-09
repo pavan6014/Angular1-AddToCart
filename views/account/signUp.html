@@ -1,0 +1,215 @@
+<div class="container content-sm">
+    <div class="row">
+        <div class="col-md-12 col-sm-12 col-xs-12">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="headline"><h2>Customer Wizard</h2></div>
+                </div>
+            </div>
+            <div name="outerForm" class="tab-form-demo" ng-controller="tabFormController">
+                <uib-progressbar max="max" value="step"><span style="color:white; white-space:nowrap;">{{step}} / {{max}}</span></uib-progressbar>
+                <uib-tabset active="changeActive">
+                    <uib-tab index="0" heading="Step1: Customer" select="continueFunction(1)" >
+                        <form name="customerForm" ng-submit="customerForm.$valid && continueFunction(2)" novalidate >
+                            <div class="well custom-well">
+                                <table border="0" class="customerTable">
+                                    <tr>
+                                        <td class="col-sm-6"> First Name:</td> <td><input type="text" class="form-control" ng-class="{'submitError': submitCust}" name="firstname" ng-model="user.firstname" required/>
+                                        <div class="error" ng-show="(submitCust || customerForm.firstname.$touched) && customerForm.firstname.$invalid &&  customerForm.firstname.$error.required">First name is required.</div>
+                                    </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Last Name: </td><td><input type="text" class="form-control" ng-class="{'submitError': submitCust}" name="lastname" ng-model="user.lastname" required/>
+                                        <div class="error" ng-show="(submitCust || customerForm.lastname.$touched) && customerForm.lastname.$invalid && customerForm.lastname.$error.required">Last name is required.</div>
+                                    </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Email: </td><td><input type="email" class="form-control" ng-class="{'submitError': submitCust}" name="email" ng-model="user.email" required>
+                                        <div class="error" ng-show="(submitCust || customerForm.email.$touched) && customerForm.email.$error.required">Email is required.</div>
+                                        <div class="error" ng-show="customerForm.email.$touched && customerForm.email.$error.email">Valid Email is required.</div>
+                                    </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Phone Number: </td><td><input type="number" class="form-control" ng-class="{'submitError': submitCust}" ng-pattern="/^[1-9]{1}[0-9]{9}$/" name="phoneNo" ng-model="user.phoneNo" required>
+                                        <div class="error" ng-show="(submitCust || customerForm.phoneNo.$touched) && customerForm.phoneNo.$error.required">Phone Number is required.</div>
+                                        <div class="error" ng-show="customerForm.phoneNo.$touched && customerForm.phoneNo.$invalid">Valid Phone Number is required.</div>
+                                    </td></tr>
+                                    <tr>
+                                        <td>Organization: </td><td><input type="text" class="form-control" ng-class="{'submitError': submitCust}" name="organisation" ng-model="user.organisation" required>
+                                        <div class="error" ng-show="(submitCust || customerForm.organisation.$touched) && customerForm.organisation.$invalid && customerForm.organisation.$error.required">Organisation is required.</div>
+                                    </td></tr>
+                                    <tr>
+                                        <td>Address: </td><td><input type="text" class="form-control" ng-class="{'submitError': submitCust}" name="address" ng-model="user.address" required>
+                                        <div class="error" ng-show="(submitCust || customerForm.address.$touched) && customerForm.address.$invalid && customerForm.address.$error.required">Address is required.</div>
+                                    </td></tr>
+                                    <tr>
+                                        <td>Country:
+                                        </td><td><select class="form-control" ng-model="user.country">
+                                        <option>United State Of America</option>
+                                        <option>India</option>
+                                        <option>Japan</option>
+                                        <option>China</option>
+                                    </select></td></tr>
+                                    <tr>
+                                        <td> City: </td><td><input type="text" class="form-control" ng-class="{'submitError': submitCust}" name="city" ng-model="user.city" required>
+                                        <div class="error" ng-show="(submitCust || customerForm.city.$touched) && customerForm.city.$invalid  && customerForm.city.$error.required">City is required.</div>
+                                    </td></tr>
+                                    <tr>
+                                        <td> Zip: </td><td><input type="number" class="form-control" ng-class="{'submitError': submitCust}" name="zip" ng-model="user.zip"  required>
+                                        <div class="error" ng-show="(submitCust || customerForm.zip.$touched) && customerForm.zip.$invalid  && customerForm.zip.$error.required">Zip is required.</div>
+                                    </td></tr>
+                                    <tr >
+                                        <td></td><td colspan=2> <!--<a href="#" data-toggle="tab" class="btn btn-info" ng-click="submitted=true" type="submit">Next</a>-->
+                                        <button type="submit" class="btn btn-primary" ng-click = "submitCust = true">Next</button>
+
+                                    </td></tr>
+                                </table>
+                            </div>
+                        </form>
+                    </uib-tab>
+                    <uib-tab index="1" heading="Step2: Plan"  select="continueFunction(2)" disable ="customerForm.$invalid">
+                        <form name="planForm" ng-submit="planForm.$valid && continueFunction(3)" novalidate>
+                            <div class="well custom-well">
+                                <table border="0" class="customerTable submitError">
+                                    <tr>
+                                        <td class="col-sm-4"> <label>Plan:</label></td>
+                                        <td> <select name= "plan" class="form-control" ng-model="user.planSel" ng-class="{'submitError': submitPlan}" required>
+                                            <option value="">Select Plan</option>
+                                            <option value="1000_minutes_voice_plan">Gold</option>
+                                            <option value="2000_minutes_voice_plan">Silver</option>
+                                        </select>
+                                            <div class="error" ng-show="(planForm.plan.$touched || submitPlan) && planForm.plan.$invalid">Plan is required.</div>
+                                        </td>
+                                        <td><button type="submit" class="btn btn-primary"  ng-click="submitPlan=true">Next</button></td>
+                                </table>
+                            </div>
+                        </form>
+                    </uib-tab>
+                    <uib-tab index="2" heading="Step3: Profiler" disable = "planForm.$invalid" select="continueFunction(3)">
+                        <form name="profilerForm" ng-submit="profilerForm.$valid && continueFunction(4)" novalidate>
+                            <div class="well custom-well">
+                                <table border="0" class="customerTable">
+                                    <tr>
+                                        <td class="col-sm-4"> <label>Profile:</label></td>
+                                        <td> <select name="profile" class="form-control" ng-model = "user.profile" ng-class="{'submitError': submitProfile}" required>
+                                            <option>Select Profile</option>
+                                            <option>Customer Profile</option>
+                                            <option>Business Profile</option>
+                                        </select>
+                                            <div class="error" ng-show="(profilerForm.profile.$touched || submitProfile) && profilerForm.profile.$invalid">Plan is required.</div>
+                                        </td></tr>
+                                    <tr><td> Value: </td><td><input class="form-control" type="text" ng-class="{'submitError': submitted}" name="profileValue" ng-model="user.profileValue" required>
+                                        <div class="error" ng-show="(submitProfile || profilerForm.profileValue.$touched) && profilerForm.profileValue.$error.required">Profile Value is required.</div>
+                                    </td></tr>
+                                    <tr><td></td><td colspan=2>
+                                        <button type="submit" class="btn btn-primary"  ng-click="submitProfile=true" >Next</button></td></td></tr>
+                                </table>
+                            </div>
+                        </form>
+                    </uib-tab>
+                    <uib-tab index="3" heading="Step4: Payment" disable ="profilerForm.$invalid" select="continueFunction(4)">
+                        <form name="paymentForm" ng-submit="paymentForm.$valid && continueFunction(5)" novalidate>
+                            <div class="well custom-well">
+                                <table border="0" class="customerTable">
+                                    <tr>
+                                        <td><label>Option:</label></td></tr>
+                                    <tr> <td> <div class="radio">
+                                        <label>
+                                            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>Invoice
+                                        </label>
+                                    </div></td></tr>
+                                    <tr><td>  <div class="radio">
+                                        <label>
+                                            <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">Credit Card
+                                        </label>
+                                    </div></td></tr>
+                                    <tr>
+                                        <td><label>
+                                            Use Diffrent Address:</td><td> <input type="checkbox" value="">                                                </label></td></tr>
+
+                                    <tr><td>FullName:</td><td> <input class="form-control" type="text" ng-class="{'submitError': submitPayment}" name="fullname" ng-model="user.fullname" required>
+                                        <div class="error" ng-show="(submitPayment || paymentForm.fullname.$touched) && paymentForm.fullname.$error.required">Full name is required.</div>
+                                    </td></tr>
+                                    <tr><td> Billing Address:</td><td> <input class="form-control" type="text" ng-class="{'submitError': submitPayment}" name="billingAddr" ng-model="user.billingAddr" required >
+                                        <div class="error" ng-show="(submitPayment || paymentForm.billingAddr.$touched) && paymentForm.billingAddr.$error.required">Billing Address is required.</div>
+                                    </td></tr>
+                                    <tr><td><label>Country:</td><td></label>
+                                        <select class="form-control">
+                                            <option>United State Of Amerika</option>
+                                            <option>India</option>
+                                            <option>Japan</option>
+                                            <option>China</option>
+                                        </select></td></tr>
+                                    <tr><td> City:</td><td> <input class="form-control" type="text" ng-class="{'submitError': submitPayment}" name="city" ng-model="user.city" required >
+                                        <div class="error" ng-show="(submitPayment || paymentForm.city.$touched) && paymentForm.city.$error.required">City is required.</div>
+                                    </td></tr>
+                                    <tr><td> Zip:</td><td> <input class="form-control" type="text" ng-class="{'submitError': submitPayment}" name="zip" ng-model="user.zip" required >
+                                        <div class="error" ng-show="(submitPayment || paymentForm.city.$touched) && paymentForm.city.$error.required">Zip is required.</div>
+                                    </td></tr>
+
+                                    <tr><td></td><td colspan=2> <!-- <a href="#payment" data-toggle="tab" class="btn btn-info">Prev</a>-->
+                                        <!-- <a href="#summary" data-toggle="tab" class="btn btn-info">Next</a> -->
+                                        <button type="submit" class="btn btn-primary"  ng-click="submitPayment=true;">Next</button>
+                                    </td></tr>
+                                </table>
+                            </div>
+                        </form>
+                    </uib-tab>
+                    <uib-tab index="4" heading="Step5: Summary" disable ="paymentForm.$invalid" select="continueFunction(5)">
+                        <form name="summaryForm" novalidate>
+                            <div class="well custom-well">
+                                <table border="0" class="customerTable">
+                                    <tr>
+                                        <td>First Name: </td>
+                                        <td><label id="firstName">{{user.firstname}}</label></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Last Name: </td>
+                                        <td><label id="lastName">{{user.lastname}}</label></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Email: </td>
+                                        <td><label  id="em">{{user.email}}</label></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Phone: </td>
+                                        <td><label id="ph">{{user.phoneNo}}</label></td>
+                                    </tr>
+                                    <tr>
+                                        <td>City: </td>
+                                        <td><label id="city1">{{user.city}}</label></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Country: </td>
+                                        <td><label id="country1">{{user.country}}</label></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Plan: </td>
+                                        <td><label id="plan1">{{user.planSel}}</label></td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Profile: </td>
+                                        <td><label id="profile1">{{user.profile}}</label></td>
+                                    </tr>
+                                    <tr ng-show="submitted">
+                                        <td>Account Number: </td>
+                                        <td><label id="accountNo">{{accNo}}</label></td>
+                                    </tr>
+                                    <tr ng-show="submitted">
+                                        <td>Transaction Status: </td>
+                                        <td><label id="transStatus">{{transStatus}}</label></td>
+                                    </tr>
+                                    <tr>
+                                        <td><button type="submit" class="btn btn-primary" ng-click="submitForm(user)" ng-disabled="submitted">Submit</button></td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </form>
+                    </uib-tab>
+                </uib-tabset>
+            </div>
+        </div>
+    </div>
+</div>

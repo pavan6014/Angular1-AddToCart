@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
+<head>
+	<title>CTP Web</title>
+
+	<!-- Meta -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<!-- Favicon -->
+	<link rel="shortcut icon" href="favicon.ico">
+
+	<!-- Web Fonts -->
+	<link rel='stylesheet' type='text/css' href='//fonts.googleapis.com/css?family=Open+Sans:400,300,600&amp;subset=cyrillic,latin'>
+
+	<link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap-select.min.css">
+
+	<link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.min.css">
+
+	<link rel="stylesheet" href="assets/css/custom.css">
+
+	<base href="/Angular-add-to-cart/">
+</head>
+
+<body ng-app="portal">
+
+<div class="wrapper" ng-controller="MainController">
+
+	<div header></div>
+
+	<div class="margin-top-4-cent">
+		<div ng-view></div>
+	</div>
+
+	<div footer></div>
+
+</div><!--/wrapper-->
+
+<!-- JS Global Compulsory -->
+<script type="text/javascript" src="assets/plugins/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="assets/plugins/jquery/jquery-migrate.min.js"></script>
+<script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.js"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.js"></script>
+<script type="text/javascript" src="assets/plugins/bootstrap/js/ui-bootstrap-tpls-1.2.1.min.js"></script>
+<script type="text/javascript" src="assets/plugins/angular/ngCart.js"></script>
+<script src="assets/plugins/dirPagination.js"></script>
+
+<script src="scripts/controllers/portal.js"></script>
+<script src="scripts/controllers/maintenance/maintenance-controller.js"></script>
+<script src="scripts/controllers/user/user-controller.js"></script>
+
+<script src="scripts/directives/header.js"></script>
+<script src="scripts/directives/footer.js"></script>
+
+<script src="scripts/directives/admin-navigation.js"></script>
+<script src="scripts/directives/maintenance-navigation.js"></script>
+
+</body>
+</html>

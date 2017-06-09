@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script type="text/javascript" language="javascript">
+function submitForm() {
+
+	document.getElementById("myForm").submit();
+}
+function StringBuffer() {
+	this._strings_ = new Array;
+}
+
+StringBuffer.prototype.append = function(str) {
+
+	this._strings_.push(str);
+
+};
+StringBuffer.prototype.toString = function() {
+	return this._strings_.join("");
+};
+
+function createfile() {
+	var buffer = new StringBuffer();
+buffer.append('<WEB_OP_CUST_COMMIT_CUSTOMER_inputFlist xmlns:brm="http://xmlns.oracle.com/BRM/schemas/BusinessOpcodes" xmlns="http://xmlns.oracle.com/BRM/schemas/BusinessOpcodes">');
+		buffer.append('<POID>0.0.0.1 /plan -1 0</POID>');
+		buffer.append('<LAST_NAME>LName</LAST_NAME>');
+		buffer.append('<FIRST_NAME>FNaME</FIRST_NAME>');
+		buffer.append('<COUNTRY>IN</COUNTRY>');
+		buffer.append('<CITY>BLORE</CITY>');
+		buffer.append('<ZIP>560048</ZIP>');
+		buffer.append('<PHONE>0123456789</PHONE>');
+		buffer.append('<ADDRESS>XYZ</ADDRESS>');
+		buffer.append('<NAME>1000_minutes_voice_plan</NAME>');
+		buffer.append('</WEB_OP_CUST_COMMIT_CUSTOMER_inputFlist>');
+		alert("Request is:::::\n"+buffer);
+		 document.getElementById("xmlReq").value = buffer;
+}
+</script>
+</head>
+<body>
+	<form action="adapterClient" method="POST">
+		<table border="0" class="customerTable">
+			<tr>
+				<td>First Name:</td>
+				<td><input type="text" name="firstName" class="form-control" /></td>
+			</tr>
+			<tr>
+				<td>Last Name:</td>
+				<td><input type="text" name="lastName" class="form-control" /></td>
+			</tr>
+			<tr>
+				<td>Email:</td>
+				<td><input type="text" name="email" class="form-control"></td>
+			</tr>
+			<tr>
+				<td>Phone Number:</td>
+				<td><input class="form-control"></td>
+			</tr>
+			<tr>
+				<td>Organization:</td>
+				<td><input class="form-control"></td>
+			</tr>
+			<tr>
+				<td>Address:</td>
+				<td><input class="form-control"></td>
+			</tr>
+			<tr>
+				<td>Country:</td>
+				<td><select class="form-control">
+						<option>1</option>
+						<option>2</option>
+						<option>3</option>
+						<option>4</option>
+						<option>5</option>
+				</select></td>
+			</tr>
+			<tr>
+				<td>City:</td>
+				<td><input class="form-control"></td>
+			</tr>
+			<tr>
+				<td>Zip:</td>
+				<td><input class="form-control"></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td colspan=2><input type="submit" value="Next" onClick="createfile()"
+					data-toggle="tab" class="btn btn-info"></td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>

@@ -1,0 +1,33 @@
+portal.directive('customSelect', function() {
+    return {
+        restrict: 'A',
+        scope: {
+          'model': '='
+        },
+        link: function(scope, elem, attrs) {
+
+            jQuery(elem).selectpicker();
+
+            scope.$watch('model', function(newVal) {
+               jQuery(elem).selectpicker('refresh');
+          });
+
+          }
+      };
+});
+
+/*Custom chose file function*/
+portal.directive('customChoseFile', function() {
+    return {
+        restrict: 'A',
+        link: function(scope, elem, attrs) {
+
+            jQuery(":file").filestyle({buttonText: "Browse"});
+
+            scope.$watch('model', function(newVal) {
+               console.log("working");
+          });
+
+          }
+      };
+});

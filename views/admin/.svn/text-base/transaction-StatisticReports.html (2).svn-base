@@ -1,0 +1,127 @@
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="headline"><h2>Transaction Statistic Reports</h2></div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-3">
+            <div admin-navigation></div>
+        </div>
+        <div class="col-sm-9">
+
+            <div class="panel panel-default margin-bottom-40">
+                <div class="panel-heading">
+                    <h3 class="panel-title"><i class="fa"></i>Transaction Statistic Reports</h3>
+                </div>
+                <div class="panel-body">
+                    <form action="#" id="sky-form1" class="sky-form" style="border:none;">
+                        <fieldset>
+                            <div class="row">
+                                <div class="col-sm-4">
+                                    <label class="margin-top-10">Transaction Type <span style="color: red;">*</span></label>
+                                    <div class="input-group col-sm-12">
+                                        <select custom-select  class="form-control" >
+                                            <option value="Selected">All</option>
+                                            <option value="Move">Move</option>
+                                            <option value="Transfer">Transfer</option>
+                                            <option value="ReplaceModem">Replace Modem</option>
+                                            <option value="Cancel">Cancel</option>
+                                            <option value="Disconnect">Disconnect</option>
+                                            <option value="RelocateOutlet">Relocate Outlet</option>
+                                            <option value="Reschedule">Reschedule</option>
+                                            <option value="Reconnect">Reconnect</option>
+                                            <option value="ChangeOfSpeedTier">Change Of Speed Tier</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                    <div class="col-sm-4">
+                                        <label class="margin-top-10">Start Date<span style="color: red;">*</span></label>
+                                        <p class="input-group">
+                                            <input type="text" class="form-control radius-left-top-bot" uib-datepicker-popup="{{format}}" ng-model="purchaseDate" is-open="popup1.opened" min-date="minDate" max-date="maxDate" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" close-text="Close" alt-input-formats="altInputFormats" value="{{account.purchaseDate}}"/>
+                                          <span class="input-group-btn">
+                                            <button type="button" class="btn btn-default radius-right-top-bot" ng-click="openDate()"><i class="glyphicon glyphicon-calendar"></i></button>
+                                          </span>
+                                        </p>
+                                    </div>
+                                <div class="col-sm-4">
+                                    <label class="margin-top-10">End Date<span style="color: red;">*</span></label>
+                                    <p class="input-group">
+                                        <input type="text" class="form-control radius-left-top-bot" uib-datepicker-popup="{{format}}" ng-model="purchaseDate" is-open="popup2.opened" min-date="minDate" max-date="maxDate" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" close-text="Close" alt-input-formats="altInputFormats" value="{{account.purchaseDate}}"/>
+                                          <span class="input-group-btn">
+                                            <button type="button" class="btn btn-default radius-right-top-bot" ng-click="openDate()"><i class="glyphicon glyphicon-calendar"></i></button>
+                                          </span>
+                                    </p>
+                                </div>
+
+
+                            </div>
+                            <hr class="devider">
+                            <div class="row">
+                                <section class="col-sm-12">
+                                    <button class="btn-u btn-u-default">Cancel</button>
+                                    <button class="btn-u" ng-click="showTable=true">Submit</button>
+                                </section>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+
+
+            </div>
+        </div>
+
+        <div class="col-sm-9">
+
+        <div class="panel panel-default" ng-show="showTable">
+            <div class="panel-heading">
+                <h3 class="panel-title"><i class="fa"></i>Customer Transaction History</h3>
+            </div>
+            <div class="panel-body">
+                <table class="table table-striped invoice-table">
+                    <thead>
+                    <tr class="verticl-mid-align">
+                        <th>Transaction ID</th>
+                        <th class="head-align">Transaction Type</th>
+                        <th>Status</th>
+                        <th>Transaction Date</th>
+                        <th>Transaction Time</th>
+                        <th>Export</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td ng-click="openPopup()"><a href="#">1234567</a></td>
+                        <td>Move Service</td>
+                        <td>InProgress</td>
+                        <td>01/08/2016</td>
+                        <td>10:10:00</td>
+                        <td></td>
+
+                    </tr>
+                    <tr>
+                        <td ng-click="openPopup()"><a href="#">2345678</a></td>
+                        <td>Transfer Request</td>
+                        <td>InProgress</td>
+                        <td>12/11/2015</td>
+                        <td>11:10:15</td>
+                        <td></td>
+
+                    </tr>
+                    <tr>
+                        <td ng-click="openPopup()"><a href="#">3456789</a></td>
+                        <td>RF Troubleshooting</td>
+                        <td>Completed</td>
+                        <td>12/11/2015</td>
+                        <td>12:10:30</td>
+                        <td></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+            </div>
+
+    </div>
+</div>

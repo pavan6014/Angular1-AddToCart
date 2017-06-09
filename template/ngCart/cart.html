@@ -1,0 +1,78 @@
+<div class="alert alert-warning" role="alert" ng-show="ngCart.getTotalItems() === 0">
+    Your cart is empty
+</div>
+<div ng-show="ngCart.getTotalItems() === 0">
+    <div class="clr-bth"></div>
+    <div class="custom-divider"></div>
+    <div class="row pull-right">
+        <div class="col-sm-12">
+            <a href="cancel" class="btn-u margin-right-5">Go Back to Landing page</a>
+        </div>
+    </div>
+</div>
+
+<div class="table-responsive col-lg-12" ng-show="ngCart.getTotalItems() > 0">
+
+    <table class="table table-striped ngCart cart">
+
+        <thead>
+        <tr>
+            <th></th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Quantity</th>
+            <th>Amount</th>
+            <th>Total</th>
+        </tr>
+        </thead>
+        <tfoot>
+        <tr ng-show="ngCart.getTax()">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>Tax ({{ ngCart.getTaxRate() }}%):</td>
+            <td>{{ ngCart.getTax() | currency }}</td>
+        </tr>
+        <tr ng-show="ngCart.getShipping()">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>Shipping:</td>
+            <td>{{ ngCart.getShipping() | currency }}</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>Total:</td>
+            <td>{{ ngCart.totalCost() | currency }}</td>
+        </tr>
+        </tfoot>
+        <tbody>
+        <tr ng-repeat="item in ngCart.getCart().items track by $index">
+            <td><span ng-click="ngCart.removeItemById(item.getId(),$event)" class="glyphicon glyphicon-remove"></span></td>
+
+            <td>{{ item.getName() }}</td>
+            <td></td>
+            <td>
+                <span class="glyphicon glyphicon-minus" ng-class="{'disabled':item.getQuantity()==1}"
+                      ng-click="item.setQuantity(-1, true)"></span>
+                {{ item.getQuantity() | number }}
+                &nbsp;&nbsp; <span class="glyphicon glyphicon-plus" ng-click="item.setQuantity(1, true)"></span></td>
+           <td>{{ item.getPrice() | currency}}</td>
+           <td>{{ item.getTotal() | currency }}</td>
+       </tr>
+       </tbody>
+   </table>
+    <div class="clr-bth"></div>
+    <div class="custom-divider"></div>
+    <div class="row pull-right">
+        <div class="col-sm-12">
+            <a href="cancel" class="btn-u margin-right-5">Cancel</a>
+            <a class="btn-u" href="maintenance/customerWizard">Finish Purchase</a>
+        </div>
+    </div>
+</div>

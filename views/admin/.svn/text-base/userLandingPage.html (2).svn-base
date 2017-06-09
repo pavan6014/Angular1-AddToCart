@@ -1,0 +1,135 @@
+<div class="container">
+    <div class="row">
+        <div class="col-sm-4">
+            <div class="col-sm-12">
+                <div class="row">
+                    <div class="col-sm-12 margin-bottom-40">
+                        <div class=""><h2></h2></div>
+                    </div>
+                </div>
+            <div class="panel panel-default margin-bottom-40">
+                <div class="panel-heading">
+                    <h3 class="panel-title"><i class="fa"></i>Create Transcation</h3>
+                </div>
+                <div class="panel-body margin-left-5">
+                <div class="row">
+                    <input type="radio" id="radio01" name="searchOption" class="custom-radio ng-pristine ng-untouched ng-valid" ng-model="queryBy.searchOption" value="tpiaNo">
+                    <label>Existing Customer</label>
+                    <div class="input-group visible-lg col-md-6">
+                        <input type="text" class="form-control radius-right-top-bot ng-pristine ng-untouched ng-valid" ng-model="queryBy.tpiaNo" placeholder="Enter Customer Account Number">
+                    </div>
+                </div>
+                <div class="row">
+                    <hr class="devider">
+                </div>
+
+                <div class="row">
+                    <input type="radio" id="radio01" name="searchOption" class="custom-radio ng-pristine ng-untouched ng-valid" ng-model="queryBy.searchOption" value="postalCode">
+                    <label>New Customer</label>
+
+                    <input type="radio" id="radio01" name="searchOption" class="custom-radio ng-pristine ng-untouched ng-valid" ng-model="queryBy.searchOption" value="transfer">
+                    <label>Transfer</label>
+
+                    <input type="radio" id="radio01" name="searchOption" class="custom-radio ng-pristine ng-untouched ng-valid" ng-model="queryBy.searchOption" value="move">
+                    <label>Move</label>
+
+                    <div class="input-group col-md-6">
+                        <input type="text" class="form-control ng-pristine ng-untouched ng-valid" ng-model="queryBy.postalCode" placeholder="Enter Postal Code">
+                    </div>
+
+                    <div class="input-group col-md-6 margin-top-15">
+                        <input type="text" class="form-control ng-pristine ng-untouched ng-valid" ng-model="queryBy.serviceAddress" placeholder="Service Address">
+                    </div>
+
+                    <div class="row">
+                        <hr class="devider">
+                    </div>
+
+                    <input type="radio" id="radio01" name="searchOption" class="custom-radio ng-pristine ng-untouched ng-valid" ng-model="queryBy.searchOption" value="misc">
+                    <label>Miscallaneous</label>
+
+                    <div class="row clr-bth">
+                        <hr class="devider">
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="input-group">
+                                <a ng-show="(queryBy.searchOption === 'postalCode')" href="search/new" class="btn-u ng-hide"><i class="fa fa-add"></i> Continue</a>
+                                <a ng-show="(queryBy.searchOption === 'tpiaNo')" href="search/existing" class="btn-u"><i class="fa fa-add"></i> Continue</a>
+                                <a ng-show="(queryBy.searchOption === 'transfer')" href="search/transfer" class="btn-u ng-hide"><i class="fa fa-add"></i> Continue</a>
+                                <a ng-show="(queryBy.searchOption === 'move')" href="search/move" class="btn-u ng-hide"><i class="fa fa-add"></i> Continue</a>
+                                <a ng-show="(queryBy.searchOption === 'misc')" href="search/misc" class="btn-u ng-hide"><i class="fa fa-add"></i> Continue</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+           </div>
+        </div>
+
+        <div class="col-sm-8">
+                <div class="col-sm-12">
+                    <div class="row">
+                        <div class="col-sm-12 margin-bottom-40">
+                            <div class=""><h2></h2></div>
+                        </div>
+                    </div>
+                <div class="panel panel-default margin-bottom-40">
+                    <div class="panel-heading">
+                        <h3 class="panel-title"><i class="fa"></i>Manage Transcation</h3>
+                    </div>
+                    <div class="panel-body">
+                        <table class="table table-bordered" id="usersTable">
+                            <thead>
+                            <tr>
+                                <th><input type="checkbox" value=""><label></label></th>
+                                <th>Transaction ID</th>
+                                <th>Transaction Type</th>
+                                <th>ISP</th>
+                                <th>Submission Date</th>
+                                <th>SLA Date</th>
+                                <th>Status</th>
+                                <th>Locked By</th>
+                                <th></th>
+                            </tr>
+                            </thead>
+                           <tbody>
+                                <tr>
+                                    <td><input type="checkbox" value=""><label></label></td>
+                                    <td>1234567</td>
+                                    <td>Move</td>
+                                    <td>Com Wave</td>
+                                    <td>01/08/2016 10:10:00</td>
+                                    <td>01/08/2016 12:10:00</td>
+                                    <td>Created</td>
+                                    <td>James01</td>
+                                    <td>
+                                        <button class="btn btn-warning btn-xs">View</button>
+                                        <button class="btn btn-warning btn-xs">Accept</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox" value=""><label></label></td>
+                                    <td>1234567</td>
+                                    <td>Move</td>
+                                    <td>Tech savvy</td>
+                                    <td>01/08/2016 10:10:00</td>
+                                    <td>01/08/2016 12:10:00</td>
+                                    <td>Rejected</td>
+                                    <td>James01</td>
+                                    <td>
+                                        <button class="btn btn-warning btn-xs">View</button>
+                                        <button class="btn btn-warning btn-xs">Accept</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+             </div>
+
+        </div>
+    </div>
+</div>

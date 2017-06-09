@@ -1,0 +1,122 @@
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="headline"><h2>Product Catalog - Capacity Request</h2></div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-3">
+            <div admin-navigation></div>
+        </div>
+
+        <div class="col-sm-9">
+            <div class="panel panel-default margin-bottom-40">
+                <div class="panel-heading">
+                    <h3 class="panel-title"><i class="fa"></i>Capacity Request</h3>
+                </div>
+                <div class="panel-body">
+                    <form class="navbar-form search-align margin-bottom-15" role="search">
+                        <div class="input-group add-on">
+                            <input type="text" class="form-control radius-left-top-bot" placeholder="Search" name="srch-term" id="srch-term">
+                            <div class="input-group-btn">
+                                <button class="btn btn-default radius-right-top-bot" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+                            </div>
+                        </div>
+                    </form>
+                    <table class="table table-bordered" id="usersTable">
+                        <thead>
+                        <tr>
+                            <th><input type="checkbox" value=""><label></label></th>
+                            <th>Service Area</th>
+                            <th>Service Area Type</th>
+                            <th>Maximum Capacity</th>
+
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr ng-repeat="user in users">
+                            <td><input type="checkbox" id='{{$index}}' value=""><label></label></td>
+                            <td>{{user.serviceArea}}</td>
+                            <td>{{user.serviceType}}</td>
+                            <td>{{user.maximumLink}}</td>
+
+
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="row">
+                    <section class="col-sm-12 button-width">
+                        <button class="btn-u btn-u-default">Cancel</button>
+                        <button class="btn-u">Submit</button>
+                    </section>
+                </div>
+            </div>
+
+
+
+
+            <div class="panel panel-default margin-bottom-40">
+                <div class="panel-heading">
+                    <h3 class="panel-title"><i class="fa"></i> Capacity Request TPIA</h3>
+                </div>
+                <div class="panel-body">
+
+                    <div class="row margin-bottom-10">
+                        <div class="col-sm-6">
+                            <label>Current Capacity <span style="color: red;">*</span></label>
+                            <div class="input-group col-sm-12">
+                                <input type="text" class="form-control" re>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6">
+                            <label>Requested Capacity <span style="color: red;">*</span></label>
+                            <div class="input-group col-sm-12">
+                                <select custom-select  class="form-control">
+                                    <option selected>Select</option>
+                                    <option > 1 GB</option>
+                                    <option > 10 GB</option>
+                                    <option > 100 GB</option>
+                                </select>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                    <div class="row margin-bottom-10">
+                        <div class="col-sm-6">
+                            <label>	Final Capacity  <span style="color: red;">*</span></label>
+                            <div class="input-group col-sm-12">
+                                <input type="text" class="form-control" readonly>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6">
+                            <label>	Order Date <span style="color: red;">*</span></label>
+                            <p class="input-group">
+                                <input type="text" class="form-control radius-left-top-bot" uib-datepicker-popup="{{format}}" ng-model="purchaseDate" is-open="popup1.opened" min-date="minDate" max-date="maxDate" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" close-text="Close" alt-input-formats="altInputFormats" value="{{account.purchaseDate}}"/>
+                                          <span class="input-group-btn">
+                                            <button type="button" class="btn btn-default radius-right-top-bot" ng-click="openDate()"><i class="glyphicon glyphicon-calendar"></i></button>
+                                          </span>
+                            </p>
+                        </div>
+
+
+
+                    </div>
+                    <hr class="devider">
+                    <div class="row">
+                        <section class="col-sm-12">
+                            <button class="btn-u btn-u-default">Cancel</button>
+                            <button class="btn-u">Submit</button>
+                        </section>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,7 @@
+portal.directive('troubleNavigation', function() {
+    return {
+        restrict: 'A',
+        replace: true,
+        templateUrl: 'views/trouble/navigation.html'
+    };
+});

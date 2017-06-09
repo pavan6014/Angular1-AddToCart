@@ -1,0 +1,22 @@
+portal.directive('customModals', function () {
+    return {
+        restrict: 'A',
+        require: '?ngModel',
+        transclude: true,
+        scope:{
+            ngModel: '='
+        },
+        template: '<div id="{{modalId}}" class="modal fade">\
+  <div class="modal-dialog">\
+    <div class="modal-content">\
+      <div class="modal-footer">\
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Ok</button>\
+      </div>\
+    </div>\
+  </div>\
+</div>',
+        link: function(scope, el, attrs, transcludeFn){
+            scope.modalId = attrs.modalId;
+        }
+    };
+});

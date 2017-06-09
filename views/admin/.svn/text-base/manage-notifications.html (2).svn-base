@@ -1,0 +1,83 @@
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="headline"><h2>Manage Notifications</h2></div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-3">
+            <div admin-navigation></div>
+        </div>
+        <div class="col-sm-9">
+            <div class="panel panel-default margin-bottom-40">
+                <div class="panel-heading">
+                    <h3 class="panel-title"><i class="fa"></i>Notifications</h3>
+                </div>
+                <div class="panel-body">
+                        <table class="table table-bordered" id="usersTable">
+                            <thead>
+                            <tr>
+                                <th><input type="checkbox" value=""><label></label></th>
+                                <th>Notification ID</th>
+                                <th>TPIA Name</th>
+                                <th>Title</th>
+                                <th>Description</th>
+                                <th>Start Date</th>
+                                <th>End Date</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td></td>
+                                <td><input class="form-control" ng-model="search.notificationId" type="text" value="" placeholder="search"></td>
+                                <td>
+                                    <select custom-select  class="form-control" ng-model="search.tpiaName" type="text" value="" placeholder="search">
+                                        <option value="CIK">CIK</option>
+                                        <option value="ComWave">ComWave</option>
+                                        <option value="">All</option>
+                                    </select>
+                                </td>
+                                <td><input class="form-control" ng-model="search.title" type="text" value="" placeholder="search"></td>
+                                <td><input class="form-control" ng-model="search.description" type="text" value="" placeholder="search"></td>
+                                <td><input class="form-control" ng-model="search.startDate" type="text" value="" placeholder="search"></td>
+                                <td><input class="form-control" ng-model="search.endDate" type="text" value="" placeholder="search"></td>
+                                <td>
+                                    <select custom-select  class="form-control" ng-model="search.status" type="text" value="" placeholder="search">
+                                        <option value="Active">Active</option>
+                                        <option value="Deactivated">Inactive</option>
+                                        <option value="">Both</option>
+                                    </select>
+                                </td>
+                                <td></td>
+                            </tr>
+                            <tr ng-repeat="notification in notifications | filter:search">
+                                <td><input type="checkbox" value=""><label></label></td>
+                                <td>{{notification.notificationId}}</td>
+                                <td>{{notification.tpiaName}}</td>
+                                <td>{{notification.title}}</td>
+                                <td>{{notification.description}}</td>
+                                <td>{{notification.startDate}}</td>
+                                <td>{{notification.endDate}}</td>
+                                <td>{{notification.status}}</td>
+                                <td>
+                                    <a href="javascript:void();"><i class="fa fa-pencil"></i>Edit</a>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+
+                        <div class="margin-top-15">
+                            <button class="btn btn-u">Activate</button>
+                            <button class="btn btn-u btn-u-default">Deactivate</button>
+                            <button class="btn btn-u" ng-click="notificationPopup()">Add</button>
+                            <button class="btn btn-u btn-u-default">Delete</button>
+                        </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>

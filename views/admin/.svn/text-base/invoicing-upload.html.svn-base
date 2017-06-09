@@ -1,0 +1,66 @@
+<div class="container" ng-controller = "myCtrl" >
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="headline"><h2>Upload Invoice</h2></div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-3">
+            <div admin-navigation></div>
+        </div>
+        <div class="col-sm-9">
+            <div class="row">
+                <div class="col-sm-12">
+                   <!-- <userinformation></userinformation>-->
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title"><i class="fa"></i>Upload New Invoice</h3>
+                        </div>
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <label>ISP Name <span style="color: red;">*</span></label>
+                                    <div class="input-group col-sm-12">
+                                        <select custom-select  class="form-control">
+                                            <option selected>Select</option>
+                                            <option >ISP1</option>
+                                            <option >ISP2</option>
+                                            <option>ISP3</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="clr-bth"></div>
+                            <div class="row margin-top-15">
+                                <div class="col-sm-6">
+                                    <label>File <span style="color: red;">*</span></label>
+                                    <div ng-controller = "myCtrl">
+                                        <input type="file" class="filestyle" data-buttonText="Browse" custom-chose-file>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row margin-top-15">
+                                <div class="col-sm-12">
+                                    <button class="btn-u">Upload</button>
+                                    <button class="btn-u btn-u-default">Cancel</button>
+                                </div>
+                            </div>
+
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+
+              <!--  <div class="col-sm-12">
+                    <div customerrequest></div>
+
+                </div>--->
+
+            </div>
+        </div>
+    </div>
+    </div>

@@ -1,0 +1,175 @@
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="headline"><h2>Submit Reschedule </h2></div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-3">
+            <div service-navigation></div>
+            <div trouble-navigation></div>
+        </div>
+        <div class="col-sm-9">
+            <div class="row">
+                <div class="col-sm-12">
+                    <userinformation></userinformation>
+                    <div servicetype></div>
+                    <div modeminformation></div>
+
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title"><i class="fa"></i> Transaction History</h3>
+                        </div>
+
+                        <div class="panel-body">
+
+                            <table class="table table-striped invoice-table">
+                                <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>Transaction ID</th>
+                                    <th>Transaction Type</th>
+                                    <th>Transaction Date</th>
+                                    <th>Status</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr ng-repeat="transaction in account.CustomerTransHistory">
+                                    <td><input type="radio" name="optradio"><label class="custom-label"></label></td>
+                                    <td><a href="#">{{transaction.transactionID}}</a></td>
+                                    <td>{{transaction.transactionType}}</td>
+                                    <td>{{transaction.transactionDate}}</td>
+                                    <td>{{transaction.status}}</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+
+
+                    <!-- <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title"><i class="fa"></i> Transaction History </h3>
+                        </div>
+
+                        <div class="panel-body">
+                            <label>Select a transaction to be rescheduled:</label>
+                            <table class="table table-striped invoice-table">
+                                <thead>
+                                <tr class="verticl-mid-align">
+                                    <th class="width-20"></th>
+                                    <th>Transaction ID</th>
+                                    <th>Transaction Type</th>
+                                    <th>Transaction Date</th>
+                                    <th>Status</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td><input type="radio" name="optradio"><label class="custom-label"></label></td>
+                                    <td><a href="#">1234567</a></td>
+                                    <td>Move Service</td>
+                                    <td>01/08/2016 10:10:00</td>
+                                    <td> In Progress</td>
+                                </tr>
+                                <tr>
+                                    <td><input type="radio" name="optradio"><label class="custom-label"></label></td>
+                                    <td><a href="#">2345678</a></td>
+                                    <td>New Install</td>
+                                    <td>12/11/2015 11:10:15 </td>
+                                    <td>Created</td>
+                                </tr>
+                                <tr>
+                                    <td><input type="radio" name="optradio"><label class="custom-label"></label></td>
+                                    <td><a href="#">3456789</a></td>
+                                    <td>RF Troubleshooting</td>
+                                    <td>12/11/2015 12:10:30</td>
+                                    <td>In Progress</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        </div>--->
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title"><i class="fa"></i>Reschedule</h3>
+                        </div>
+
+                        <div class="panel-body">
+                            <form style="border:none;">
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <label class="label-bar">Reschedule Appointment <span style="color:red;"></span></label>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <p class="input-group">
+                                            <input type="text" class="form-control radius-left-top-bot" uib-datepicker-popup="{{format}}" ng-model="dt" is-open="popup1.opened" min-date="minDate" max-date="maxDate" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" close-text="Close" alt-input-formats="altInputFormats" />
+                                          <span class="input-group-btn">
+                                            <button type="button" class="btn btn-default radius-right-top-bot" ng-click="openDate()"><i class="glyphicon glyphicon-calendar"></i></button>
+                                          </span>
+                                        </p>
+
+
+                                    </div>
+
+                                    <div class="col-sm-3">
+                                        <p class="input-group">
+                                            <input type="text" class="form-control radius-left-top-bot" uib-datepicker-popup="{{format}}" ng-model="dt" is-open="popup2.opened" min-date="minDate" max-date="maxDate" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" close-text="Close" alt-input-formats="altInputFormats" />
+                                          <span class="input-group-btn">
+                                            <button type="button" class="btn btn-default radius-right-top-bot" ng-click="openDate()"><i class="glyphicon glyphicon-calendar"></i></button>
+                                          </span>
+                                        </p>
+
+
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <p class="input-group">
+                                            <input type="text" class="form-control radius-left-top-bot" uib-datepicker-popup="{{format}}" ng-model="dt" is-open="popup3.opened" min-date="minDate" max-date="maxDate" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" close-text="Close" alt-input-formats="altInputFormats" />
+                                          <span class="input-group-btn">
+                                            <button type="button" class="btn btn-default radius-right-top-bot" ng-click="openDate()"><i class="glyphicon glyphicon-calendar"></i></button>
+                                          </span>
+                                        </p>
+
+
+                                    </div>
+                                </div>
+
+                                <div class="row  margin-top-10">
+                                    <div class="col-sm-3">
+                                        <label class="label-bar">Preferred Window <span style="color:red;"></span></label>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <select custom-select  class="form-control">
+                                            <option selected="" value="Select">Rogers(Auto-Populated)</option>
+                                            <option value="Cisco">2:00 PM to 4:00 PM</option>
+                                            <option value="Cisco">4:00 PM to 6:00 PM</option>
+                                            <option value="Cisco">6:00 PM to 8:00 PM</option>
+                                        </select>
+
+                                    </div>
+
+
+                                </div>
+                                <div class="row  margin-top-20">
+                                    <div class="col-sm-6">
+
+                                        <section class="col col-12">
+                                            <button class="btn-u">Submit</button>
+                                        </section>
+
+                                    </div>
+                                </div>
+
+
+                            </form>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+    </div></div>

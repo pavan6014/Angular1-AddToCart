@@ -1,0 +1,42 @@
+<div>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title"><i class="fa"></i>Existing Modem </h3>
+        </div>
+        <div class="panel-body">
+            <form style="border:none;">
+                <div class="row">
+                    <section class="col col-md-9">
+
+                        <div class="colText">
+                            <div class="row">
+                                <div class="col-md-6"><label class="inputTextWidth">Modem Model:</label></div>
+                                <div class="col-md-6">{{account.modemModel}}</div>
+                            </div>
+
+                            <div class="row margin-top-10">
+                                <div class="col-md-6"><label class="inputTextWidth">Modem  MAC:</label></div>
+                                <div class="col-md-6">{{account.modemMAC}}</div>
+                            </div>
+                            <div class="row margin-top-10">
+                                <div class="col-md-6"><label class="inputTextWidth">Modem ESN:</label></div>
+                                <div class="col-md-6">{{account.modemESN}}</div>
+                            </div>
+                           <!-- <div class="row margin-top-10">
+                                <div class="col-md-6"><label class="inputTextWidth">Modem Manufacturer:</label></div>
+                                <div class="col-md-6">{{account.modemType}} </div>
+                            </div>
+
+                            <div class="row margin-top-10">
+                                <div class="col-md-6"><label class="inputTextWidth"> Modem Purchase date:</label></div>
+                                <div class="col-md-6">{{account.purchaseDate}}</div>
+                            </div>--->
+                        </div>
+
+                    </section>
+
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

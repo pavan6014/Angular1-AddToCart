@@ -1,0 +1,48 @@
+<div ng-controller="maintenanceController">
+
+    <div class="row">
+        <div class="col-md-3 col-sm-3 col-xs-12 left-nav-fixed padding-right-0">
+            <div maintenance-navigation class="navigationBar"></div>
+        </div>
+
+        <div class="col-md-9 col-sm-9 col-xs-12 padding-left-30 border-left-2 pull-right">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="headline"><h2>Maintenance</h2></div>
+                </div>
+            </div>
+            <div class="panel panel-default margin-bottom-40">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Plan And Add Ons</h3>
+                </div>
+                <div class="panel-body">
+                    <form style="border:none;">
+                        <div class="row">
+                            <section class="col col-md-9">
+
+                                <div class="colText">
+                                    <div class="row">
+                                        <div class="col-md-12"><label class="inputTextWidth">Plan Information</label></div>
+                                        <div class="col-md-12" ng-hide="editProfile">{{details.planInfo}}</div>
+                                    </div>
+
+                                    <div class="row margin-top-10">
+                                        <div class="col-md-12"><label class="inputTextWidth">Add-On Information:</label></div>
+                                        <div class="col-md-12" ng-hide="editProfile">{{details.addOnInfo}}</div>
+                                    </div>
+                                    <div class="row margin-top-10">
+                                        <div class="col-md-12"><label class="inputTextWidth">Billing & Balance Information:</label></div>
+                                        <div class="col-md-12" ng-hide="editProfile">{{details.bBInfo}}</div>
+                                    </div>
+                                </div>
+
+                            </section>
+
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

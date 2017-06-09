@@ -1,0 +1,95 @@
+<!--<div class="container content-sm">
+    <div ng-show="loggedIn">
+        <div class="row margin-bottom-10">
+            <div class="col-sm-12">
+                <div class="headline"><h2>Featured Services and Offers</h2></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h3 class="panel-title"><i class="fa"></i> Purchase</h3>
+                            </div>
+                            <div class="panel-body">
+
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <h4> Chosen Offer/Select Offer </h4>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-2">
+                                        <label>Plan Name </label>
+                                    </div>
+                                    <div class="col-sm-5">
+                                        <input type="text" class="form-control" placeholder="Offer Name" >
+                                    </div>
+                                    <div class="col-sm-5">
+                                        <input type="text" class="form-control" placeholder="Offer Description" >
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <h4>Select Your Add-on </h4>
+                                    </div>
+                                </div>
+                                <div class="row margin-bottom-10">
+                                    <div class="col-sm-2">
+                                        <label>Plan Name </label>
+                                    </div>
+                                    <div class="col-sm-5">
+                                        <select class="form-control" id="sel1">
+                                            <option>1</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                            <option>4</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-sm-5">
+                                        <div style="background-color: #e2f2f7;">
+                                          <p class="padding-top-10 padding-left-15"> - Add-on Name Add on Description</p>
+                                          <p class="padding-bottom-10 padding-left-15"> - Add-on Name Add on Description</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row pull-right">
+                                    <div class="col-sm-12">
+                                        <a href="cancel" class="btn-u margin-right-5">Cancel</a>
+                                        <button type="button" class="btn-u">Finish Purchase</button>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>-->
+
+<div class="container content-sm">
+    <div ng-show="loggedIn">
+        <div class="row margin-bottom-10">
+            <div class="col-sm-12">
+                <div class="headline"><h2>Featured Services and Offers</h2></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title"><i class="fa"></i> Purchase</h3>
+                    </div>
+                    <div class="panel-body">
+                        <ngcart-cart></ngcart-cart>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

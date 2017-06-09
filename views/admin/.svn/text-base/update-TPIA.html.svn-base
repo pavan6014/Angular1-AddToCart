@@ -1,0 +1,71 @@
+<div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="headline"><h2>Manage TPIA</h2></div>
+            </div>
+        </div>
+    <div class="row">
+        <div class="col-sm-3">
+            <div admin-navigation></div>
+        </div>
+
+        <div class="col-sm-9">
+            <div class="panel panel-default margin-bottom-40">
+                <div class="panel-heading">
+                    <h3 class="panel-title"><i class="fa"></i>TPIA Providers</h3>
+                </div>
+                <div class="panel-body" ng-controller="MainController">
+                    <table class="table table-bordered" id="usersTable">
+                        <thead>
+                        <tr>
+                            <th><input type="checkbox" value=""><label></label></th>
+                            <th>Name</th>
+                            <th>BE Code</th>
+                            <th>Email Address</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                        </thead>
+
+                        <tbody>
+                        <tr>
+                            <td></td>
+                            <td><input class="form-control" ng-model="search.name" type="text" value="" placeholder="search"></td>
+                            <td><input class="form-control" ng-model="search.becode" type="text" value="" placeholder="search"></td>
+                            <td><input class="form-control" ng-model="search.email" type="text" value="" placeholder="search"></td>
+                            <td>
+                                <select custom-select  class="form-control" ng-model="search.status" type="text" value="" placeholder="search">
+                                    <option value="Active">Active</option>
+                                    <option value="Deactivated">Inactive</option>
+                                    <option value="">Both</option>
+                                </select>
+                            </td>
+                            <td></td>
+                        </tr>
+                        <tr ng-repeat="tpia in updateTPIA | filter:search">
+                            <td><input type="checkbox" value=""><label></label></td>
+                            <td>{{ tpia.name }}</td>
+                            <td>{{ tpia.becode }}</td>
+                            <td>{{ tpia.email}}</td>
+                            <td>{{ tpia.status}}</td>
+                            <td><a class="margin-right-10" href="javascript:void();" ng-click="updateTPIAPopup($index)"><i class="fa fa-pencil"></i>Edit</a></td>
+                        </tr>
+                        </tbody>
+
+                    </table>
+
+                    <div class="margin-top-15">
+                        <button class="btn btn-u">Activate</button>
+                        <button class="btn btn-u btn-u-default">Deactivate</button>
+                        <button class="btn btn-u" ng-click="updateTPIAPopup()">Add</button>
+                        <button class="btn btn-u btn-u-default">Delete</button>
+                    </div>
+            </div>
+
+            </div>
+
+
+
+        </div>
+    </div>
+</div>

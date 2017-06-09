@@ -1,0 +1,280 @@
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="headline"><h2>Product Catalog</h2></div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-3">
+            <div admin-navigation></div>
+        </div>
+        <div class="col-sm-9">
+
+            <div class="panel panel-default margin-bottom-40">
+                <div class="panel-heading">
+                    <h3 class="panel-title"><i class="fa"></i>PHUB</h3>
+                </div>
+                <div class="panel-body">
+
+                    <div class="row margin-bottom-10">
+                        <div class="col-sm-4">
+                            <label>PHUB Code <span style="color: red;">*</span></label>
+                            <div class="input-group col-sm-12">
+                                <select custom-select  class="form-control">
+                                    <option selected>Select</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-4">
+                            <label>PHUB Description <span style="color: red;">*</span></label>
+                            <div class="input-group col-sm-12">
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="col-sm-4">
+                            <label>Province <span style="color: red;">*</span></label>
+                            <div class="input-group col-sm-12">
+                                <select custom-select  class="form-control">
+                                    <option selected>Select</option>
+                                </select>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="row margin-bottom-10">
+                        <div class="col-sm-6">
+                            <label>Feed Type <span style="color: red;">*</span></label>
+                            <div class="input-group col-sm-12">
+                                <select custom-select  class="form-control">
+                                    <option selected>Select</option>
+                                    <option >Coax(Copper)</option>
+                                    <option >Fibre</option>
+                                    <option>Both</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <label>POI Type <span style="color: red;">*</span></label>
+                            <div class="input-group col-sm-12">
+                                <select custom-select  class="form-control">
+                                    <option selected>Select</option>
+                                    <option>Aggregated</option>
+                                    <option>Disaggregated</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row margin-bottom-10">
+                        <div class="col-sm-4">
+                            <label>Maximum Uplink <span style="color: red;">*</span></label>
+                            <div class="input-group col-sm-12">
+                                <select custom-select  class="form-control">
+                                    <option selected>Select</option>
+                                    <option > 10Mbps</option>
+                                    <option >100Mbps</option>
+                                    <option >250Mbps</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-4">
+                            <label>Maximum Downlink <span style="color: red;">*</span></label>
+                            <div class="input-group col-sm-12">
+                                <select custom-select  class="form-control">
+                                    <option selected>Select</option>
+                                    <option > 10Mbps</option>
+                                    <option >100Mbps</option>
+                                    <option >250Mbps</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-4">
+                            <label>Serving Area Status <span style="color: red;">*</span></label>
+                            <div class="input-group col-sm-12">
+                                <select custom-select  class="form-control">
+                                    <option selected>Select</option>
+                                    <option >Available</option>
+                                    <option >Not Available</option>
+                                </select>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+
+                </div>
+            </div>
+
+            <div class="panel panel-default margin-bottom-40">
+                <div class="panel-heading">
+                    <h3 class="panel-title"><i class="fa"></i>Modem</h3>
+                </div>
+                <div class="panel-body">
+                    <div class="row margin-bottom-10">
+                        <div class="col-sm-6">
+                            <label>Manufacturer <span style="color: red;">*</span></label>
+                            <div class="input-group col-sm-12">
+                                <select custom-select  class="form-control">
+                                    <option selected>Select</option>
+                                    <option > Active</option>
+                                    <option >Expired</option>
+                                    <option >Grandfathered</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6">
+                            <label>Model <span style="color: red;">*</span></label>
+                            <div class="input-group col-sm-12">
+                                <select custom-select  class="form-control">
+                                    <option selected>Select</option>
+                                    <option > Active</option>
+                                    <option >Expired</option>
+                                    <option >Grandfathered</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row margin-bottom-10">
+                        <div class="col-sm-6">
+                            <label>Firmware/Software <span style="color: red;">*</span></label>
+                            <div class="input-group col-sm-12">
+                                <select custom-select  class="form-control">
+                                    <option selected>Select</option>
+                                    <option > Active</option>
+                                    <option >Expired</option>
+                                    <option >Grandfathered</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6">
+                            <label>Description <span style="color: red;">*</span></label>
+                            <div class="input-group col-sm-12">
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row margin-bottom-10">
+                        <div class="col-sm-6">
+                            <label>Device Product Code <span style="color: red;">*</span></label>
+                            <div class="input-group col-sm-12">
+                                <select custom-select  class="form-control">
+                                    <option selected>Select</option>
+                                    <option > Active</option>
+                                    <option >Expired</option>
+                                    <option >Grandfathered</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <label> Status <span style="color: red;">*</span></label>
+                            <div class="input-group col-sm-12">
+                                <select custom-select  class="form-control">
+                                    <option selected>Select</option>
+                                    <option > Active</option>
+                                    <option >Expired</option>
+                                    <option >Grandfathered</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="panel panel-default margin-bottom-40">
+                <div class="panel-heading">
+                    <h3 class="panel-title"><i class="fa"></i>Capacity</h3>
+                </div>
+                <div class="panel-body">
+
+                    <div class="row margin-bottom-10">
+                        <div class="col-sm-4">
+                            <label>Serving Area <span style="color: red;">*</span></label>
+                            <div class="input-group col-sm-12">
+                                <select custom-select  class="form-control">
+                                    <option selected>Select</option>
+                                    <option > Active</option>
+                                    <option >Expired</option>
+                                    <option >Grandfathered</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-4">
+                            <label>Serving Area Type<span style="color: red;">*</span></label>
+                            <div class="input-group col-sm-12">
+                                <select custom-select  class="form-control">
+                                    <option selected>Select</option>
+                                    <option > Active</option>
+                                    <option >Expired</option>
+                                    <option >Grandfathered</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-4">
+                            <label> Link ID <span style="color: red;">*</span></label>
+                            <div class="input-group col-sm-12">
+                                <input type="text" class="form-control" >
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="row margin-bottom-10">
+                        <div class="col-sm-4">
+                            <label>	Maximum Link Capacity  <span style="color: red;">*</span></label>
+                            <div class="input-group col-sm-12">
+                                <select custom-select  class="form-control">
+                                    <option selected>Select</option>
+                                    <option > 1 GB</option>
+                                    <option > 10 GB</option>
+                                    <option > 100 GB</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-4">
+                            <label>	Link Turn-up date <span style="color: red;">*</span></label>
+                            <div class="input-group col-sm-12">
+                                <input type="text" class="form-control" >
+                            </div>
+                        </div>
+
+                        <div class="col-sm-4">
+                            <label>	Link Status <span style="color: red;">*</span></label>
+                            <div class="input-group col-sm-12">
+                                <select custom-select  class="form-control">
+                                    <option selected>Select</option>
+                                    <option > Active</option>
+                                    <option >Expired</option>
+                                    <option >Grandfathered</option>
+                                </select>
+                            </div>
+                        </div>
+
+                    </div>
+                    <hr class="devider">
+                    <div class="row">
+                        <section class="col-sm-12">
+                            <button class="btn-u btn-u-default">Update</button>
+                            <button class="btn-u">Cancel</button>
+                        </section>
+                    </div>
+
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>

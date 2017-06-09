@@ -1,0 +1,17 @@
+<div>
+<ul class="list-group sidebar-nav-v1" id="sidebar-nav">
+    <li class="list-group-item list-toggle active">
+        <a data-toggle="collapse" data-parent="#sidebar-nav" href="#collapse-typography"
+           class="" aria-expanded="true">Administration</a>
+        <ul id="collapse-typography" class="collapse in" aria-expanded="true">
+            <li ng-class="{active: itemActive=='admin/roles'}"><a href="admin/roles" ng-click="changeItemActive('admin/roles')">Manage Roles</a></li>
+            <li ng-class="{active: itemActive=='admin/users'}"><a href="admin/users" ng-click="changeItemActive('admin/users')">Manage Users</a></li>
+            <li ng-class="{active: itemActive=='admin/manage-product-catalog'}"><a href="admin/manage-product-catalog" ng-click="changeItemActive('admin/manage-product-catalog')">Manage Product Catalog</a></li>
+            <li ng-class="{active: itemActive=='admin/manage-notifications'}"><a href="admin/manage-notifications" ng-click="changeItemActive('admin/manage-notifications')">Manage Notifications</a></li>
+            <li ng-class="{active: itemActive=='admin/invoicing-upload'}"><a href="admin/invoicing-upload" ng-click="changeItemActive('admin/invoicing-upload')">Upload Invoice</a></li>
+            <li ng-class="{active: itemActive=='admin/invoicing-download'}"><a href="admin/invoicing-download" ng-click="changeItemActive('admin/invoicing-download')">Download Invoice</a></li>
+            <li ng-class="{active: itemActive=='admin/update-TPIA'}"><a href="admin/update-TPIA" ng-click="changeItemActive('admin/update-TPIA')">Manage TPIA</a></li>
+        </ul>
+    </li>
+</ul>
+</div>

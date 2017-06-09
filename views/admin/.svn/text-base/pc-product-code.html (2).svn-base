@@ -1,0 +1,142 @@
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="headline"><h2>Product Catalog - Product Code</h2></div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-3">
+            <div admin-navigation></div>
+        </div>
+        <div class="col-sm-9">
+
+            <div class="panel panel-default margin-bottom-40">
+                <div class="panel-heading">
+                    <h3 class="panel-title"><i class="fa"></i>Product Code</h3>
+                </div>
+                <div class="panel-body">
+
+
+                    <div class="row margin-bottom-10">
+                        <div class="col-sm-4">
+                            <label>Enter BE Code <span style="color: red;">*</span></label>
+                            <div class="input-group col-sm-12">
+                                <select custom-select  class="form-control " ng-model="beCode" ng-change="loadProductCatalogSA(beCode)">
+
+                                    <option value="1">Code 1</option>
+                                    <option value="2">Code 2</option>
+                                    <option value="3">Code 3</option>
+                                </select>
+                            </div>
+
+
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-4 label-bar1">
+                                <label>TPIA Code </label>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="row margin-bottom-10">
+                        <div class="col-sm-6">
+                            <label>Service Product Code <span style="color: red;">*</span></label>
+                            <div class="input-group col-sm-12">
+                                <input type="text" class="form-control " placeholder="" name="srch-term" id="ServiceProductCode" ng-model="productCatalog.servicingArea.ServiceProductCode" value="">
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <label>Service Product Code Description  <span style="color: red;">*</span></label>
+                            <div class="input-group col-sm-12">
+                                <input type="text" class="form-control " placeholder="" name="srch-term" id="ServiceProductCodeDescription" ng-model="productCatalog.servicingArea.ServiceProductCodeDescription" value="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row margin-bottom-10">
+                        <div class="col-sm-4">
+                            <label>Feed Type <span style="color: red;">*</span></label>
+                            <div class="input-group col-sm-12">
+                                <select custom-select  class="form-control" id="pHUBFeedType" model="productCatalog.servicingArea.pHUBFeedType" ng-model="productCatalog.servicingArea.pHUBFeedType">
+                                    <option selected>Select</option>
+                                    <option value="1">Coax(Copper)</option>
+                                    <option value="2">Fibre</option>
+                                    <option value="3">Both</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <label>POI Type <span style="color: red;">*</span></label>
+                            <div class="input-group col-sm-12">
+                                <select custom-select  class="form-control" id="PHUBPoiType" model="productCatalog.servicingArea.PHUBPoiType" ng-model="productCatalog.servicingArea.PHUBPoiType">
+                                    <option selected>Select</option>
+                                    <option value="1">Aggregated</option>
+                                    <option value="2">Disaggregated</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <label>Device Product Code Minimum<span style="color: red;">*</span></label>
+                            <div class="input-group col-sm-12">
+                                <input type="text" class="form-control " placeholder="" name="srch-term" id="DeviceProductCodeMinimum" ng-model="productCatalog.servicingArea.DeviceProductCodeMinimum" value="">
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                    <div class="row margin-bottom-10">
+                        <div class="col-sm-4">
+                            <label>Maximum Uplink <span style="color: red;">*</span></label>
+                            <div class="input-group col-sm-12">
+                                <select custom-select  class="form-control"  id="PHUBMaximumUplink" model="productCatalog.servicingArea.PHUBMaximumUplink" ng-model="productCatalog.servicingArea.PHUBMaximumUplink">
+                                    <option>Select</option>
+                                    <option value="1"> 10Mbps</option>
+                                    <option value="2">100Mbps</option>
+                                    <option value="3">250Mbps</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-4">
+                            <label>Maximum Downlink <span style="color: red;">*</span></label>
+                            <div class="input-group col-sm-12">
+                                <select custom-select  class="form-control"  id="PHUBMaximumDownlink" model="productCatalog.servicingArea.PHUBMaximumDownlink" ng-model="productCatalog.servicingArea.PHUBMaximumDownlink">
+                                    <option>Select</option>
+                                    <option value="1"> 10Mbps</option>
+                                    <option value="2">100Mbps</option>
+                                    <option value="3">250Mbps</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-4">
+                            <label> Status <span style="color: red;">*</span></label>
+                            <div class="input-group col-sm-12">
+                                <select custom-select  class="form-control"  id="PHUBStatus" model="productCatalog.servicingArea.PHUBStatus" ng-model="productCatalog.servicingArea.PHUBStatus">
+                                <option selected>Select</option>
+                                    <option value="1"> Active</option>
+                                    <option value="2">Expired</option>
+                                    <option value="3">Grandfathered</option>
+                                </select>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <hr class="devider">
+                            <div class="row">
+                                <section class="col-sm-12">
+                                    <button class="btn-u btn-u-default">Cancel</button>
+                                    <button class="btn-u">Submit</button>
+                                </section>
+                            </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

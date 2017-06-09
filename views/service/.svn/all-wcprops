@@ -1,0 +1,95 @@
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/repos/tpia_prototype/!svn/ver/159/tpia-portal/tpia-portal/src/main/webapp/views/service
+END
+reconnect.html
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/repos/tpia_prototype/!svn/ver/150/tpia-portal/tpia-portal/src/main/webapp/views/service/reconnect.html
+END
+reschedule.html
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/repos/tpia_prototype/!svn/ver/136/tpia-portal/tpia-portal/src/main/webapp/views/service/reschedule.html
+END
+userInformation.html
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/repos/tpia_prototype/!svn/ver/122/tpia-portal/tpia-portal/src/main/webapp/views/service/userInformation.html
+END
+change-of-service.html
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/repos/tpia_prototype/!svn/ver/127/tpia-portal/tpia-portal/src/main/webapp/views/service/change-of-service.html
+END
+cancel.html
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/repos/tpia_prototype/!svn/ver/153/tpia-portal/tpia-portal/src/main/webapp/views/service/cancel.html
+END
+disconnect.html
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/repos/tpia_prototype/!svn/ver/136/tpia-portal/tpia-portal/src/main/webapp/views/service/disconnect.html
+END
+misc.html
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/repos/tpia_prototype/!svn/ver/88/tpia-portal/tpia-portal/src/main/webapp/views/service/misc.html
+END
+new-install.html
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/repos/tpia_prototype/!svn/ver/158/tpia-portal/tpia-portal/src/main/webapp/views/service/new-install.html
+END
+navigation.html
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/repos/tpia_prototype/!svn/ver/122/tpia-portal/tpia-portal/src/main/webapp/views/service/navigation.html
+END
+serviceType.html
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/repos/tpia_prototype/!svn/ver/158/tpia-portal/tpia-portal/src/main/webapp/views/service/serviceType.html
+END
+move.html
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/repos/tpia_prototype/!svn/ver/74/tpia-portal/tpia-portal/src/main/webapp/views/service/move.html
+END
+modemInformation.html
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/repos/tpia_prototype/!svn/ver/159/tpia-portal/tpia-portal/src/main/webapp/views/service/modemInformation.html
+END
+relocate-outlet.html
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/repos/tpia_prototype/!svn/ver/150/tpia-portal/tpia-portal/src/main/webapp/views/service/relocate-outlet.html
+END
+replace-modem.html
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/repos/tpia_prototype/!svn/ver/158/tpia-portal/tpia-portal/src/main/webapp/views/service/replace-modem.html
+END
+customerRequest.html
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/repos/tpia_prototype/!svn/ver/70/tpia-portal/tpia-portal/src/main/webapp/views/service/customerRequest.html
+END

@@ -1,0 +1,139 @@
+<div class="content-sm">
+    <div ng-show="loggedIn" class="no-content-space" ng-controller="cartCtrl">
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+                <li data-target="#myCarousel" data-slide-to="3"></li>
+            </ol>
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner" role="listbox">
+
+                <div class="item active">
+                    <div class="list1">
+                        <div class="container">
+                            <div class="white-txt carousel-caption">
+                                <h2 class="white-txt">Stay Connected</h2>
+                                <p>Home phone service: Stay Connected</p>
+                                <p>$50.00 voice Monthly</p>
+                                <p>$30 onetime charge</p>
+                                <p>1000 mins free</p>
+                                <p>Call forwarding/diverting included*</p>
+                                <p>No Contract.</p>
+                                <h3 class="white-txt">Features :</h3>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                                <a class="btn btn-primary disabled" href="" title="">Start shopping</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="list1">
+                        <div class="container">
+                            <div class="white-txt carousel-caption">
+                                <h2 class="white-txt">Business Phone Service</h2>
+                                <p>Business-grade high-speed Internet solutions to fit your needs and budget. Available nationwide.</p>
+                                <p>$100.00 voice Monthly </p>
+                                <p>$150 onetime charge </p>
+                                <p>2000 mins free </p>
+                                <p>Call forwarding/diverting included* </p>
+                                <p>First 2 months 50% discount on monthly fee </p>
+                                <p>No Contract.</p>
+                                <h3 class="white-txt">Features :</h3>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                                <a class="btn btn-primary" href="service/productDetails" title="">Start shopping</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="list1">
+                        <div class="container">
+                            <div class="white-txt carousel-caption">
+                                <h2 class="white-txt">Network & Security</h2>
+                                <p>Peace of mind made easy: fully managed WiFi, private network and security solutions for your headquarters, field offices and remote employees.</p>
+                                <p>$25 monthly</p>
+                                <p>No Contract</p>
+                                <h3 class="white-txt">Features :</h3>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                                <a class="btn btn-primary disabled" href="" title="">Start shopping</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="list1">
+                        <div class="container">
+                            <div class="white-txt carousel-caption">
+                                <h2 class="white-txt">Mail& Web</h2>
+                                <p>Cost-saving mail & domain needs for your business.</p>
+                                <p>mailbox for only $5.95/mo</p>
+                                <p>1 website for $8.99/year</p>
+                                <h3 class="white-txt">Features :</h3>
+                                <p>Donec id elit non mi porta gravida at eget metus id elit mi egetine. Fusce dapibus</p>
+                                <a class="btn btn-primary disabled" href="" title="">Start shopping</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Left and right controls -->
+            <a class="left carousel-control" data-target="#myCarousel" role="button" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left custom-arrow-left" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" data-target="#myCarousel" role="button" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right custom-arrow-right" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+
+    <div ng-show="loggedIn === false" ng-class="{loginPageCss:!loggedIn}">
+        <div class="container-fluid">
+            <div class="row margin-bottom-10">
+                <div class="col-md-4 col-sm-6 col-xs-8 grid-center loginPagebox">
+                        <form action="#" class="sky-form label-rounded">
+                            <fieldset>
+                                <div class="reg-header">
+                                    <h2>Login to your account</h2>
+                                </div>
+                                <div class="row">
+                                    <div class="input-group margin-bottom-20">
+                                        <span class="input-group-addon radius-left-top-bot"><i class="fa fa-user"></i></span>
+                                        <input type="text" placeholder="Username" class="form-control radius-right-top-bot">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="input-group margin-bottom-20">
+                                        <span class="input-group-addon radius-left-top-bot"><i class="fa fa-lock"></i></span>
+                                        <input type="password" placeholder="Password" class="form-control radius-right-top-bot">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="input-group">
+                                        <a href="#" class="btn-u margin-right-10" ng-click="login()">Login</a>
+                                        <a href="#" class="btn-u">Reset</a>
+                                    </div>
+                                    <hr>
+                                </div>
+                                <h4 class="pull-right">New User ? <a href="account/signUp">Signup</a></h4>
+                                <h4><a href="account/forgetLogin">Forgot Login ?</a></h4>
+                                <h4><a href="account/forgetPassword">Forgot Password ?</a></h4>
+                                <p><a href="account/resetPassword" class="color-green" href="#"></a></p>
+
+                            </fieldset>
+                        </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
